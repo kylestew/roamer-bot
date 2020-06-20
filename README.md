@@ -7,24 +7,28 @@ A small SLAM capable robot built on the Pololu Romi chassis
 # Progress:
 
 - [x] Order parts
-- [ ] Build basic Romi kit with motor driver
-- [ ] Run motor test on 32U4 driver board 
+- [x] Build basic Romi kit with motor driver
+- [x] Run motor test on 32U4 driver board 
+- [ ] Write 32U4 control board firmware
+- [ ] Install ROS on Raspberry Pi
+- [ ] Present 32U4 board as ROS node(s) on Raspberry Pi
 
-
-- [ ] Get motor driver board talking to Raspberry Pi
-
-- [ ] PID calibration on motor driver board
-- [ ] Calibrate IMU on 32U4 board
+- [ ] PID calibration on motor driver board?
+- [ ] Calibrate IMU on 32U4 board?
 
 - [ ] Create URDF for virtualization
 - [ ] Full ROS/Gazebo virtualization 
-- [ ] Install ROS on rPi
 - [ ] Basic Teleop from remote computer
 - [ ] Confirm odometry in ROS
 - [ ] Install LIDAR unit on robot
 - [ ] Confirm LIDAR in ROS
 - [ ] Setup SLAM dependencies in ROS
 - [ ] Autonomous navigation!
+
+## Libraries
+
+- [Pololu Romi 32U4 Ardino Library](https://github.com/pololu/romi-32u4-arduino-library)
+- [RomiPi Library](https://github.com/ftPeter/RomiPi)
 
 ## Examples I'm Learning From
 
