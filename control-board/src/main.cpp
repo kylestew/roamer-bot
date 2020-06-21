@@ -3,7 +3,7 @@
 
 #include "odometry.h"
 
-#define DEBUG TRUE
+#define DEBUG FALSE
 
 struct Data {
     // 0, 1, 2
@@ -64,7 +64,7 @@ void loop() {
     slave.buffer.rightEncoder = encoders.getCountsRight();
 
     // make data available to master
-    slave.finalizeWrites();
+    // slave.finalizeWrites();
 
 #ifdef DEBUG
     static unsigned long lastDebugTime = 0;
@@ -92,4 +92,3 @@ void loop() {
     }
 #endif
 }
-
