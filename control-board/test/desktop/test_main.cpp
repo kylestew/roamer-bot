@@ -1,11 +1,11 @@
 #include <unity.h>
 
-void test_basic() { TEST_ASSERT_EQUAL(true, true); }
+#include "test_kinematics.h"
 
 int main(int argc, char** argv) {
     UNITY_BEGIN();
 
-    RUN_TEST(test_basic);
+    RUN_TEST(testVelocityCalculation);
 
     UNITY_END();
 

@@ -2,11 +2,15 @@
 
 Provides the low-level operations for the Roamer Robot:
 
-+ Motor control (w/PID)
-+ IMU (TODO: what can be read here?)
++ Motor control (w/PID) takes ROS Twist command data
++ Encoders publish robot ODOM
++ IMU publishes robot POSE
++ Auto shutdown if new Twist command not received in a defined period
 + Buttons
 + LEDs
 + Battery voltage
+
+
 
 ### I2C Interface
 
