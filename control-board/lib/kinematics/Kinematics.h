@@ -1,23 +1,28 @@
 #pragma once
 
+#define RPM_TO_RPS 1 / 60
+
 class Kinematics {
 public:
-    struct velocities {
-        float left_wheel;
-        float right_wheel;
+    struct rpm {
+        int left_motor;
+        int right_motor;
     };
 
-    Kinematics(float wheel_seperation) : _wheel_seperation(wheel_seperation) {}
+    // struct velocities {
+    //     float left_wheel;
+    //     float right_wheel;
+    // };
 
-    // x: m/s - z: rad/s
-    void setTwistTarget(float linear, float angle);
-    velocities getVelocities();
+    Kinematics(float circumference, float seperation)
+        : _circumference(circumference), _seperation(seperation) {}
+
+    // linear x: m/s - angle z: rad/s
+    rpm rpmForMotion(float linear, float angle);
 
 private:
-    // in cm
-    float _wheel_seperation;
-    float _wheel_circumference;
-
-    velocities _wheel_velocities{0, 0};
+    // in meters
+    float _circumference;
+    float _seperation;
 };
 

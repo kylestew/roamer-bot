@@ -13,3 +13,21 @@ void Kinematics::setTwistTarget(float linear, float angle) {
 }
 
 Kinematics::velocities Kinematics::getVelocities() { return _wheel_velocities; }
+
+/*
+                long encoder_ticks = read();
+                //this function calculates the motor's RPM based on encoder ticks and delta time
+                unsigned long current_time = millis();
+                unsigned long dt = current_time - prev_update_time_;
+
+                //convert the time from milliseconds to minutes
+                double dtm = (double)dt / 60000;
+                double delta_ticks = encoder_ticks - prev_encoder_ticks_;
+
+                //calculate wheel's speed (RPM)
+
+                prev_update_time_ = current_time;
+                prev_encoder_ticks_ = encoder_ticks;
+
+                return (delta_ticks / counts_per_rev_) / dtm;
+   */

@@ -1,8 +1,19 @@
+#include <Kinematics.h>
+#include <Odometry.h>
 #include <PololuRPiSlave.h>
 #include <Romi32U4.h>
 
 #define DEBUG FALSE
 
+// TODO: double check these values
+// wheel characteristics
+#define WHEEL_SEPERATION 0.5     // meters
+#define WHEEL_CIRCUMFERENCE 0.7  // pi * diameter
+
+// motor characteristics
+#define TICKS_PER_REVOLUTION 1440.0
+
+// update rates
 #define COMMAND_RATE 50      // 20 hz
 #define COMMAND_TIMEOUT 400  // ms
 #define IMU_PUB_RATE 50      // 20 hz
@@ -32,9 +43,11 @@ Romi32U4ButtonA buttonA;
 Romi32U4ButtonB buttonB;
 Romi32U4ButtonC buttonC;
 Romi32U4Encoders encoders;
-// Romi32U4Motors motors;
+Romi32U4Motors motors;
 
-Kinematics kinematics;
+Kinematics kinematics(WHEEL_CIRCUMFERENCE, WHEEL_SEPERATION);
+Odometry leftWheelOdom(TICKS_PER_REVOLUTION);
+Odometry rightWheelOdom(TICKS_PER_REVOLUTION);
 
 void setup() {
 #ifdef DEBUG
@@ -79,14 +92,17 @@ void printDebugInfo() {
 #endif
 
 void move() {
-    // update twist target from pi
-    kinematics.setTwistTarget(slave.buffer.twist_linear_x, slave.buffer.twist_angle_z);
+    // calculate required wheel RPMs for requested motion
+    Kinematics::rpm reqRPM =
+        kinematics.rpmForMotion(slave.buffer.twist_linear_x, slave.buffer.twist_angle_z);
 
-    // TODO: kine will give RPM goals for motors?
+    // get current RPM of each motor
+    unsigned long ms = millis();
+    int leftRPM = leftWheelOdom.getRPM(encoders.getCountsLeft(), ms);
+    int rightRPM = rightWheelOdom.getRPM(encoders.getCountsRight(), ms);
 
-    // pass goal RPM to PID and get back current RPM to run motor att
-
-    // send that new RPM to the motors
+    // calculate PID RPM values for motors based on measured vs required
+    // TODO: ...
 
     // TODO: push data back to PI via i2c
 }
@@ -140,7 +156,7 @@ void loop() {
     // publish IMU data
     static unsigned long lastIMUPublish = 0;
     if (ms - lastIMUPublish >= IMU_PUB_RATE) {
-        // TODO: publish IMU data now
+        // TODO: publish IMU data now (is ODOM needed too?)
         lastIMUPublish = ms;
     }
 
