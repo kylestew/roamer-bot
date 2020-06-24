@@ -8,17 +8,36 @@
 
 Kinematics ki(WHEEL_CIRCUMFERENCE, WHEEL_DISTANCE);
 
-void testVelocityCalculation() {
-    Kinematics::rpm prm = ki.rpmForMotion(0.2, 0.3);
+void testLinearRPM() {
+    Kinematics::rpm rpm = ki.rpmForMotion(0.2, 0.0);
 
-    // velocity = distance center of axel needs to travel / second
-    float left_vel = 0.24;
-    float right_vel = 0.14;
+    // velocity / distance wheel travels = wheel rotations / second
+    float linear_vel = 0.2;
+    float rps = linear_vel / WHEEL_CIRCUMFERENCE;
+    float expected = rps * RPS_TO_RPM;
 
-    // velocity / distance wheel travels = rot / second
-    float left_rpm = left_vel / WHEEL_CIRCUMFERENCE;
-    float right_rpm = right_vel / WHEEL_CIRCUMFERENCE;
+    TEST_ASSERT_EQUAL_FLOAT(rpm.left_motor, expected);
+    TEST_ASSERT_EQUAL_FLOAT(rpm.right_motor, expected);
+}
 
-    TEST_ASSERT_EQUAL_FLOAT(vel.left_motor, left_rpm * RPM_TO_RPS);
-    TEST_ASSERT_EQUAL_FLOAT(vel.right_motor, right_rpm * RPM_TO_RPS);
+void testRotationalRPM() {
+    Kinematics::rpm rpm = ki.rpmForMotion(0, 0.3);
+
+    // linear velocity = radius * angular velocity
+    float ang_v = 0.3;
+    float lin_v = (WHEEL_DISTANCE / 2.0) * ang_v;
+
+    // positive angular velocity = CW spin = left motor moving forward
+    float left_rpm = -(lin_v / WHEEL_CIRCUMFERENCE) * RPS_TO_RPM;
+    float right_rpm = (lin_v / WHEEL_CIRCUMFERENCE) * RPS_TO_RPM;
+
+    TEST_ASSERT_EQUAL_FLOAT(rpm.left_motor, left_rpm);
+    TEST_ASSERT_EQUAL_FLOAT(rpm.right_motor, right_rpm);
+}
+
+void testCombinedRPM() {
+    Kinematics::rpm rpm = ki.rpmForMotion(0.2, 0.3);
+
+    TEST_ASSERT_EQUAL_FLOAT(rpm.left_motor, 16.8);
+    TEST_ASSERT_EQUAL_FLOAT(rpm.right_motor, 31.2);
 }
