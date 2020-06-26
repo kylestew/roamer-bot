@@ -98,11 +98,11 @@ void move() {
 
     // get current RPM of each motor
     unsigned long ms = millis();
-    int leftRPM = leftWheelOdom.getRPM(encoders.getCountsLeft(), ms);
-    int rightRPM = rightWheelOdom.getRPM(encoders.getCountsRight(), ms);
+    float leftRPM = leftWheelOdom.getRPM(encoders.getCountsLeft(), ms);
+    float rightRPM = rightWheelOdom.getRPM(encoders.getCountsRight(), ms);
 
     // calculate PID RPM values for motors based on measured vs required
-    // TODO: ...
+    // TODO: PID value that maps to motor input
 
     // TODO: push data back to PI via i2c
 }

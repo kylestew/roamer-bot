@@ -1,4 +1,5 @@
 -Ilib/romi-32u4
 -Ilib/PololuRPiSlave/src
--Ilib/Kinematics
--Ilib/Odometry
+-Ilib/kinematics
+-Ilib/odometry
+-Ilib/pid
