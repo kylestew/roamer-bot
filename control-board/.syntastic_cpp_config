@@ -3,3 +3,4 @@
 -Ilib/kinematics
 -Ilib/odometry
 -Ilib/pid
+-I/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/cores/arduino

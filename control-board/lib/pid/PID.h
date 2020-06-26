@@ -11,4 +11,5 @@ private:
     float _kp;
     float _ki;
     float _kd;
+    float _integral;
 };

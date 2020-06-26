@@ -8,7 +8,10 @@ PID::PID(float min, float max, float kp, float ki, float kd)
 float PID::compute(float goal, float measured) {
     float error = goal - measured;
 
-    float pid = (_kp * error);
+    // accumulate errors as integral
+    _integral += error;
+
+    float pid = (_kp * error) + (_ki * _integral);
 
     return constrain(pid, _min, _max);
 }
