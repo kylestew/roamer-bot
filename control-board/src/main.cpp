@@ -14,11 +14,21 @@
 #define TICKS_PER_REVOLUTION 1440.0
 #define MAX_RPM 200  // experimentally found safe upper limit
 
+/* Low Battery Warning
+ * The Raspberry Pi seems most supceptable to brown out so I'm focusing on its needs.
+ * According to the Romi32U4 onboard regulator docs [https://www.pololu.com/product/2858],
+ * a dropout voltage might approach 0.75v during peak loads on the regulator. In order to
+ * maintain 5V out, 5.75v must be delivered by the batteries.
+ * (I have not verified correctness of all this - battery monitoring is hard)
+ */
+#define LOW_BATT_VALUE 5750
+
 // update rates
-#define SAMPLE_DELTA 20      // 50 hz
-#define COMMAND_TIMEOUT 400  // ms
-#define IMU_PUB_RATE 50      // 20 hz
-#define DEBUG_RATE 500       // 2 hz
+#define SAMPLE_DELTA 20       // 50 hz
+#define COMMAND_TIMEOUT 400   // ms
+#define IMU_PUB_RATE 50       // 20 hz
+#define BATT_CHECK_RATE 8000  // every 8 seconds
+#define DEBUG_RATE 500        // 2 hz
 
 struct Data {
     // 0, 1, 2
@@ -98,6 +108,12 @@ void printDebugInfo() {
 }
 #endif
 
+void checkBatteryLevel() {
+    if (readBatteryMillivolts() < LOW_BATT_VALUE) {
+        buzzer.play("v12>>f#>>>g");
+    }
+}
+
 void move() {
     // calculate required wheel RPMs for requested motion
     Kinematics::rpm req_rpm =
@@ -170,6 +186,13 @@ void loop() {
 
     // make data available to master
     slave.finalizeWrites();
+
+    // battery low warning chime
+    static unsigned long lastBatteryCheckTime = 0;
+    if (ms - lastBatteryCheckTime >= BATT_CHECK_RATE) {
+        checkBatteryLevel();
+        lastBatteryCheckTime = ms;
+    }
 
 #ifdef DEBUG
     static unsigned long lastDebugTime = 0;
