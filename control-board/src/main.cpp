@@ -1,20 +1,21 @@
 #include <Kinematics.h>
 #include <Odometry.h>
+#include <PID.h>
 #include <PololuRPiSlave.h>
 #include <Romi32U4.h>
 
 #define DEBUG FALSE
 
-// TODO: double check these values
 // wheel characteristics
-#define WHEEL_SEPERATION 0.5     // meters
-#define WHEEL_CIRCUMFERENCE 0.7  // pi * diameter
+#define WHEEL_SEPERATION 0.146    // 146mm = 0.146m
+#define WHEEL_CIRCUMFERENCE 0.43  // 6.85mm * 2pi = 0.43m
 
 // motor characteristics
 #define TICKS_PER_REVOLUTION 1440.0
+#define MAX_RPM 200  // experimentally found safe upper limit
 
 // update rates
-#define COMMAND_RATE 50      // 20 hz
+#define SAMPLE_DELTA 20      // 50 hz
 #define COMMAND_TIMEOUT 400  // ms
 #define IMU_PUB_RATE 50      // 20 hz
 #define DEBUG_RATE 500       // 2 hz
@@ -48,6 +49,8 @@ Romi32U4Motors motors;
 Kinematics kinematics(WHEEL_CIRCUMFERENCE, WHEEL_SEPERATION);
 Odometry leftWheelOdom(TICKS_PER_REVOLUTION);
 Odometry rightWheelOdom(TICKS_PER_REVOLUTION);
+PID left_pid(-MAX_RPM, MAX_RPM, 0.8, 12.0, 0, SAMPLE_DELTA / 1000.0);
+PID right_pid(-MAX_RPM, MAX_RPM, 0.8, 12.0, 0, SAMPLE_DELTA / 1000.0);
 
 void setup() {
 #ifdef DEBUG
@@ -61,6 +64,10 @@ void setup() {
     // startup sound
     // TODO: make unique
     buzzer.play("v10>>e16>>>g16");
+
+    // allows for TEMPORARY extra power to motors
+    // must ensure not constantly overdriving motor
+    motors.allowTurbo(true);
 
     ledYellow(false);
     ledGreen(true);
@@ -93,16 +100,17 @@ void printDebugInfo() {
 
 void move() {
     // calculate required wheel RPMs for requested motion
-    Kinematics::rpm reqRPM =
+    Kinematics::rpm req_rpm =
         kinematics.rpmForMotion(slave.buffer.twist_linear_x, slave.buffer.twist_angle_z);
 
     // get current RPM of each motor
     unsigned long ms = millis();
-    float leftRPM = leftWheelOdom.getRPM(encoders.getCountsLeft(), ms);
-    float rightRPM = rightWheelOdom.getRPM(encoders.getCountsRight(), ms);
+    float left_rpm = leftWheelOdom.getRPM(encoders.getCountsLeft(), ms);
+    float right_rpm = rightWheelOdom.getRPM(encoders.getCountsRight(), ms);
 
     // calculate PID RPM values for motors based on measured vs required
-    // TODO: PID value that maps to motor input
+    motors.setLeftSpeed(left_pid.calculate(req_rpm.left_motor, left_rpm));
+    motors.setRightSpeed(right_pid.calculate(req_rpm.right_motor, right_rpm));
 
     // TODO: push data back to PI via i2c
 }
@@ -136,6 +144,7 @@ void loop() {
     slave.buffer.rightEncoder = encoders.getCountsRight();
 
     // STOP the robot if no new command received within timeout
+    unsigned long ms = millis();
     static unsigned long prevCommandTime = 0;
     if (slave.buffer.new_twist_command == true) {
         // reset command timeout & mark as seen
@@ -146,9 +155,8 @@ void loop() {
     }
 
     // DRIVE the robot
-    unsigned long ms = millis();
     static unsigned long lastCommandUpdate = 0;
-    if (ms - lastCommandUpdate >= COMMAND_RATE) {
+    if (ms - lastCommandUpdate >= SAMPLE_DELTA) {
         move();
         lastCommandUpdate = ms;
     }
