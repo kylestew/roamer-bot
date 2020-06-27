@@ -12,8 +12,8 @@
 # Copyright Pololu Corporation.  For more information, see https://www.pololu.com/
 
 import smbus
-import time
 import struct
+import time
 
 class Romi32U4Driver:
     def __init__(self):
@@ -59,8 +59,47 @@ class Romi32U4Driver:
             break
         time.sleep(0.0001) 
 
-
+    """
+    OUTPUT commands
+    """
 
     def leds(self, red, green, yellow):
         self.write_pack(0, '???', red, green, yellow)
+
+    def _new_twist(self):
+        """
+        Mark current Twist as a fresh value
+        Resets command timeout on robot
+        """
+        self.write_pack(8, '?', True)
+
+    def twist(self, linear_x_m_s, angular_z_rad_s):
+        """
+        Sets a new Twist command for the robot to follow
+        """
+        self.write_pack(9, 'ff', linear_x_m_s, angular_z_rad_s)
+        self._new_twist()
+
+    """
+    INPUT robot state
+    """
+
+    def read_buttons(self):
+        return self.read_unpack(3, 3, "???")
+
+    def read_battery_millivolts(self):
+        return self.read_unpack(6, 2, "H")[0]
+
+    def read_linear_velocity(self): 
+        """
+        Linear and velocity of robot
+        Hopefully as a result of the current twist command
+        """
+        return self.read_unpack(17, 4, 'f')
+    
+    def read_angular_velocity(self): 
+        """
+        Angular and velocity of robot
+        """
+        return self.read_unpack(21, 4, 'f')
 
