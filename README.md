@@ -13,8 +13,7 @@ A small SLAM capable robot built on the Pololu Romi chassis
 - [x] Install ROS on Raspberry Pi
 - [ ] Present 32U4 board as ROS node(s) on Raspberry Pi
 - [ ] Basic Teleop of robot from remote computer
-
-- [ ] PID calibration on motor driver board?
+- [ ] Calibrate PID constants on motor driver board
 - [ ] Calibrate IMU on 32U4 board?
 
 - [ ] Create URDF for virtualization

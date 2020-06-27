@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="brain-stem" type="listener.py" name="listener_node" output="screen" />
+  <node pkg="brain-stem" type="talker.py" name="talker_node" output="screen" />
+</launch>
