@@ -15,3 +15,11 @@ Kinematics::rpm Kinematics::rpmForMotion(float linear, float angular) {
     return rpm;
 }
 
+Kinematics::velocities Kinematics::getVelocities(int left_motor_rpm, int right_motor_rpm) {
+    Kinematics::velocities vel;
+
+    //....
+
+    return vel;
+}
+

@@ -19,35 +19,41 @@
  * According to the Romi32U4 onboard regulator docs [https://www.pololu.com/product/2858],
  * a dropout voltage might approach 0.75v during peak loads on the regulator. In order to
  * maintain 5V out, 5.75v must be delivered by the batteries.
- * (I have not verified correctness of all this - battery monitoring is hard)
+ * (I'm not sure if this is correct, but the robot dies pretty much after hitting this point)
  */
-#define LOW_BATT_VALUE 5750
+#define LOW_BATT_VALUE 6000  // 0.25v buffer
 
 // update rates
 #define SAMPLE_DELTA 20       // 50 hz
-#define COMMAND_TIMEOUT 1200  // ms
+#define COMMAND_TIMEOUT 1000  // ms
 #define IMU_PUB_RATE 50       // 20 hz
 #define BATT_CHECK_RATE 8000  // every 8 seconds
 #define DEBUG_RATE 500        // 2 hz
 
 struct Data {
+    // [input] LEDs
     // 0, 1, 2
     bool led_red, led_green, led_yellow;
+    // [output] buttons
     // 3, 4, 5
     bool buttonA, buttonB, buttonC;
+    // [output] battery level
     // 6-7
     uint16_t batteryMillivolts;
 
-    // 8-9, 10-11
-    int16_t leftEncoder, rightEncoder;
-
-    // incoming TWIST command
-    // 12
+    // [input] twist command
+    // 8
     bool new_twist_command;
-    // 13-16
+    // 9-12
     float twist_linear_x;
-    // 17-20
+    // 13-16
     float twist_angle_z;
+
+    // [output] velocity
+    // 17-20
+    float vel_linear;
+    // 21-24
+    float vel_angular;
 };
 
 PololuRPiSlave<struct Data, 10> slave;
@@ -102,20 +108,14 @@ void printDebugInfo() {
     Serial.println("ma");
 
     Serial.print("Encoders: ");
-    Serial.print(slave.buffer.leftEncoder, DEC);
+    Serial.print(encoders.getCountsLeft(), DEC);
     Serial.print(" ");
-    Serial.print(slave.buffer.rightEncoder, DEC);
+    Serial.print(encoders.getCountsRight(), DEC);
     Serial.println();
 
     Serial.println();
 }
 #endif
-
-void checkBatteryLevel() {
-    if (readBatteryMillivolts() < LOW_BATT_VALUE) {
-        buzzer.play("v12>>f#>>>g");
-    }
-}
 
 void move() {
     // calculate required wheel RPMs for requested motion
@@ -131,7 +131,10 @@ void move() {
     motors.setLeftSpeed(left_pid.calculate(req_rpm.left_motor, left_rpm));
     motors.setRightSpeed(right_pid.calculate(req_rpm.right_motor, right_rpm));
 
-    // TODO: push data back to PI via i2c
+    // send velocity back to i2c master
+    Kinematics::velocities vel = kinematics.getVelocities(left_rpm, right_rpm);
+    slave.buffer.vel_linear = vel.linear;
+    slave.buffer.vel_angular = vel.angular;
 }
 
 void stop() {
@@ -150,17 +153,10 @@ void loop() {
     slave.buffer.buttonB = buttonB.isPressed();
     slave.buffer.buttonC = buttonC.isPressed();
 
-    // READ: Battery voltage
-    slave.buffer.batteryMillivolts = readBatteryMillivolts();
-
     // WRITE: LED values
     ledRed(slave.buffer.led_red);
     ledGreen(slave.buffer.led_green);
     ledYellow(slave.buffer.led_yellow);
-
-    // READ: encoder values
-    slave.buffer.leftEncoder = encoders.getCountsLeft();
-    slave.buffer.rightEncoder = encoders.getCountsRight();
 
     // STOP the robot if no new command received within timeout
     unsigned long ms = millis();
@@ -193,7 +189,12 @@ void loop() {
     // battery low warning chime
     static unsigned long lastBatteryCheckTime = 0;
     if (ms - lastBatteryCheckTime >= BATT_CHECK_RATE) {
-        checkBatteryLevel();
+        // READ: Battery voltage
+        slave.buffer.batteryMillivolts = readBatteryMillivolts();
+
+        if (readBatteryMillivolts() < LOW_BATT_VALUE) {
+            buzzer.play("v12>>f#>>>g");
+        }
         lastBatteryCheckTime = ms;
     }
 
