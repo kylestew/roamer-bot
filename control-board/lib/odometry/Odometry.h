@@ -8,10 +8,10 @@ public:
           _last_encoder_ticks(0) {}
 
     // time in ms
-    float getRPM(unsigned int encoder_ticks, unsigned long current_time);
+    float getRPM(int encoder_ticks, unsigned long current_time);
 
 private:
     float _ticks_per_revolution;
     unsigned long _last_update_time;  // ms
-    unsigned int _last_encoder_ticks;
+    int _last_encoder_ticks;
 };
