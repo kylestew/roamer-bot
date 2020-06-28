@@ -183,9 +183,6 @@ void loop() {
         lastIMUPublish = ms;
     }
 
-    // make data available to master
-    slave.finalizeWrites();
-
     // battery low warning chime
     static unsigned long lastBatteryCheckTime = 0;
     if (ms - lastBatteryCheckTime >= BATT_CHECK_RATE) {
@@ -197,6 +194,9 @@ void loop() {
         }
         lastBatteryCheckTime = ms;
     }
+
+    // make data available to master
+    slave.finalizeWrites();
 
 #ifdef DEBUG
     static unsigned long lastDebugTime = 0;
