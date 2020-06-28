@@ -16,11 +16,10 @@ def command_and_monitor(duration_s):
         print("{:}\tlinear m/s {:}\tangular rad/s {:}".format(
             i / update_freq_hz,
             romi.read_linear_velocity(), 
-            romi.read_angular_velocity()), 
-            flush=True)
+            romi.read_angular_velocity()))
         time.sleep(1.0 / update_freq_hz)
     romi.leds(0, 0, 0)
-    print("================================", flush=True)
+    print("================================")
 
 def stop(pause):
     romi.twist(0, 0)

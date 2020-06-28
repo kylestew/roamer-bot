@@ -27,7 +27,8 @@ class Brainstem():
     def cmd_vel_callback(self, data):
         linear_x = data.linear.x
         angular_z = data.angular.z
-        rospy.loginfo(rospy.get_caller_id() + " forward %s, rotation %s", linear_x, angular_z)
+        # rospy.loginfo(rospy.get_caller_id() + " forward %s, rotation %s", linear_x, angular_z)
+        self.romi.twist(linear_x, angular_z)
 
     def publish_battery_state_msg(self, publisher):
         pass
@@ -43,8 +44,8 @@ class Brainstem():
 
         rate = rospy.Rate(10) # 10hz
         while not rospy.is_shutdown():
-            # self.read_romi_state()
-            # self.publish_battery_state_msg(self.battery_pub)
+            self.read_romi_state()
+            self.publish_battery_state_msg(self.battery_pub)
 
             rate.sleep()
 
