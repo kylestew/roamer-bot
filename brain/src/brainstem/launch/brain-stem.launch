@@ -1,14 +1,12 @@
 <launch>
-  <node pkg="brain-stem" type="listener.py" name="listener_node" output="screen" />
-  <node pkg="brain-stem" type="talker.py" name="talker_node" output="screen" />
+  <node pkg="brainstem" type="node.py" name="brainstem_node" output="screen" />
 
-  <!-- gamepad support not in dependencies - just for testing -->
+  <!-- gamepad support not in dependencies - just for testing 
   <param name="joy_node/dev" value="/dev/input/js0" />
   <node pkg="joy" type="joy_node" name="joy_node" output="screen" />
   <node pkg="teleop_twist_joy" type="teleop_node" name="joy_twist" />
+  -->
 
-    <!--
-    <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop_key" required="true" output="screen" args="cmd_vel:=/turtle1/cmd_vel" />
-    -->
+  <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop_key" required="true" output="screen" />
 
 </launch>
