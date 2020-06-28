@@ -10,8 +10,8 @@ public:
     };
 
     struct velocities {
-        float linear_x;
-        float angular_z;
+        float linear;
+        float angular;
     };
 
     Kinematics(float circumference, float seperation)

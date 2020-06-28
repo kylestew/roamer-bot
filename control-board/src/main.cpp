@@ -192,7 +192,7 @@ void loop() {
         // READ: Battery voltage
         slave.buffer.batteryMillivolts = readBatteryMillivolts();
 
-        if (readBatteryMillivolts() < LOW_BATT_VALUE) {
+        if (readBatteryMillivolts() < LOW_BATT_VALUE && !usbPowerPresent()) {
             buzzer.play("v12>>f#>>>g");
         }
         lastBatteryCheckTime = ms;

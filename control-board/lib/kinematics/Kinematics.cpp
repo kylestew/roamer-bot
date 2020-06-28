@@ -18,7 +18,15 @@ Kinematics::rpm Kinematics::rpmForMotion(float linear, float angular) {
 Kinematics::velocities Kinematics::getVelocities(int left_motor_rpm, int right_motor_rpm) {
     Kinematics::velocities vel;
 
-    //....
+    // RPMs -> velocities
+
+    // linear velocity is the average of the wheel velocities
+    float avg_rps_x = (left_motor_rpm + right_motor_rpm) / 60.0;
+    vel.linear = avg_rps_x * _circumference;
+
+    // angular velocity relates to the RPM difference between between wheels
+    float avg_rps_a = (right_motor_rpm - left_motor_rpm) / 60.0;
+    vel.angular = (avg_rps_a * _circumference) / (_seperation / 2);
 
     return vel;
 }
