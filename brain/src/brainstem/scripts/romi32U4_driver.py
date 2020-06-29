@@ -11,14 +11,14 @@
 #
 # Copyright Pololu Corporation.  For more information, see https://www.pololu.com/
 
-import smbus
+from smbus import SMBus
 import struct
 import time
 
 class Romi32U4Driver:
     def __init__(self):
         # open I2C port
-        self.bus = smbus.SMBus(1)
+        self.bus = SMBus(1)
 
     def close(self):
         self.bus.close()
@@ -51,6 +51,8 @@ class Romi32U4Driver:
         for i in range(2):
             try:
                 data_array = list(struct.pack(format, *data))
+                # NOTE: had to hack these strings into ints for some reason
+                data_array = map(lambda x: int(ord(x)), data_array)
                 self.bus.write_i2c_block_data(20, address, data_array)
             except IOError:
                 write_fail_flag = True
@@ -90,16 +92,11 @@ class Romi32U4Driver:
     def read_battery_millivolts(self):
         return self.read_unpack(6, 2, "H")[0]
 
-    def read_linear_velocity(self): 
+    def read_pose_twist(self): 
         """
-        Linear and velocity of robot
+        Linear and angular velocity of robot
         Hopefully as a result of the current twist command
         """
-        return self.read_unpack(17, 4, 'f')
+        return self.read_unpack(17, 8, 'ff')
     
-    def read_angular_velocity(self): 
-        """
-        Angular and velocity of robot
-        """
-        return self.read_unpack(21, 4, 'f')
 

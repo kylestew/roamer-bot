@@ -11,8 +11,8 @@ A small SLAM capable robot built on the Pololu Romi chassis
 - [x] Run motor test on 32U4 driver board 
 - [ ] Write 32U4 control board firmware
 - [x] Install ROS on Raspberry Pi
-- [ ] Present 32U4 board as ROS node(s) on Raspberry Pi
-- [ ] Basic Teleop of robot from remote computer
+- [ ] Present 32U4 board as ROS node on Raspberry Pi
+- [x] Basic Teleop of robot from remote computer
 - [ ] Calibrate PID constants on motor driver board
 - [ ] Calibrate IMU on 32U4 board?
 
@@ -36,4 +36,8 @@ A small SLAM capable robot built on the Pololu Romi chassis
 - [Lidar Based Maze Rover](https://diyrobocars.com/2020/03/19/lessons-learned-making-a-lidar-based-maze-rover)
 - [Phoebe](https://hackaday.io/project/161085-phoebe-turtlebot)
 - [ROS TurtleBot](http://wiki.ros.org/Robots/TurtleBot)
+
+# Building on Yourself
+
+__ TODO: create build instructions __
 
