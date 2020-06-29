@@ -1,0 +1,5 @@
+<launch>
+    <!-- Start brainstem connection to base -->
+    <node pkg="brainstem" name="brainstem" type="node.py" output="screen" />
+
+</launch>

@@ -4,3 +4,6 @@
 [submodule "brain/src/lino_pid"]
 	path = brain/src/lino_pid
 	url = https://github.com/linorobot/lino_pid.git
+[submodule "brain/src/lino_msgs"]
+	path = brain/src/lino_msgs
+	url = https://github.com/linorobot/lino_msgs.git
