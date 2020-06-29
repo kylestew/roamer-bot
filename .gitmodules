@@ -1,3 +1,6 @@
 [submodule "control-board/lib/romi-32u4"]
 	path = control-board/lib/romi-32u4
 	url = https://github.com/pololu/romi-32u4-arduino-library.git
+[submodule "brain/src/lino_pid"]
+	path = brain/src/lino_pid
+	url = https://github.com/linorobot/lino_pid.git
