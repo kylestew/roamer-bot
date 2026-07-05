@@ -180,6 +180,8 @@ Assembly lessons from the Pololu Raspberry Pi Romi build:
 
 ## Prior Project Reference
 
+The previous Romi 32U4 + Raspberry Pi + ROS implementation is parked under `legacy/old-romi/`. Its old external submodules are no longer active repo dependencies; their URLs and pinned commits are listed in [Legacy Romi references](docs/legacy-romi-references.md).
+
 Useful lessons from the existing `roamer-bot` code:
 
 - The old Romi project already had the right split: low-level board owns motor control, encoders, battery, buttons/LEDs, and command timeout; host computer owns higher-level behavior.
