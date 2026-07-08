@@ -452,7 +452,7 @@
         "uuid": "3304d5f8-08d9-4046-829b-96d64a4f111d"
       }
     ],
-    "used_designators": "L1,C5,C7-9,#PWR12,#PWR15,#PWR17,#PWR19,#PWR32-36,U5",
+    "used_designators": "L1,R9-11,D1,C5-11,#PWR3,#PWR12,#PWR15,#PWR17,#PWR19,#PWR32-38,U5",
     "variants": []
   },
   "sheets": [
