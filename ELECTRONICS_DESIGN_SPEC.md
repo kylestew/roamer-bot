@@ -27,7 +27,7 @@ The goal is to understand and own the robot's electrical/control stack end to en
 - Motor driver and basic control board should be one self-contained assembly.
 - Onboard computer is deferred until the motor/control assembly works.
 - The motor/basic-control board will be a fully custom MCU + PCB design, not a dev-board carrier.
-- MCU family is undecided and will be selected later.
+- MCU is provisionally selected as `STM32F103CBT6`, pending JLCPCB availability/library verification and final pin assignment.
 - PCB should mount directly to the Romi chassis, similar to the Pololu Romi controller board.
 - PCB should mate with the Romi encoder boards directly.
 - PCB outline does not need to clone the Pololu Romi controller board exactly, as long as required mounting, encoder mating, clearance, and access constraints are preserved.
@@ -200,10 +200,12 @@ Ballpark references from the old build, not commitments:
 
 ## Not Decided Yet
 
-- MCU family.
+- JLCPCB availability/library verification for `STM32F103CBT6`.
+- Final STM32 pin assignment.
 - Motor-driver IC versus discrete H-bridge.
 - Exact power architecture.
 - Board outline.
 - Connector choices.
 - Telemetry format.
 - Whether motor-driver de-risking needs eval hardware before Rev A.
+- Whether to try adding a compass IC / magnetometer on the sensor I2C bus.
