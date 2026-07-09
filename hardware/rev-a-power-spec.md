@@ -2,7 +2,7 @@
 
 Status: draft baseline
 
-Selected approach: minimal split battery/USB power.
+Selected approach: battery-powered logic and motor rails; USB is telemetry-only.
 
 This spec defines the Rev A power behavior needed to support motor control, encoder logging, telemetry, and safe stop.
 
@@ -10,7 +10,7 @@ This spec defines the Rev A power behavior needed to support motor control, enco
 
 Rev A should be safe and understandable during bring-up:
 
-- USB/debug can power logic without powering the wheels.
+- USB/debug does not power the board; battery or bench supply powers logic and motors.
 - Battery or current-limited bench supply powers the motor rail.
 - Motor output requires both firmware permission and available motor power.
 - Telemetry reports enough power state to explain resets, weak batteries, and disabled motors.
@@ -22,7 +22,7 @@ The goal is not a polished consumer-style power system. The goal is a reliable l
 Required:
 
 - Romi battery input through the chassis battery contacts.
-- USB input for programming, debug, serial telemetry, and optional logic power.
+- USB input for serial telemetry only.
 - Bench-supply access for controlled bring-up of the motor rail.
 
 Battery assumptions:
@@ -44,15 +44,15 @@ Use these conceptual rails in the schematic:
 - `VBAT_RAW`: direct battery/bench input.
 - `VBAT_PROTECTED`: after reverse-polarity protection.
 - `VMOTOR`: switched/enabled motor-driver supply.
-- `VUSB`: USB bus voltage.
+- `VUSB`: USB bus voltage, used for USB protection and optional presence sensing only.
 - `VLOGIC`: regulated MCU/logic rail.
 - `VENC`: encoder board supply, normally derived from `VLOGIC`.
 
 Rules:
 
 - `VMOTOR` must not be sourced from USB.
-- `VLOGIC` may be sourced from USB during programming and debug.
-- The MCU should remain powered when motor output is disabled, as long as USB or valid logic power is present.
+- `VLOGIC` is sourced from the battery/bench-derived regulator, not USB.
+- The MCU should remain powered when motor output is disabled, as long as valid battery/bench-derived logic power is present.
 - Motor-driver logic supply should follow `VLOGIC`; motor-driver motor supply should follow `VMOTOR`.
 
 ## Required Functions
@@ -62,7 +62,7 @@ Minimum Rev A power functions:
 - Reverse-polarity protection on battery/bench motor input.
 - Motor-rail enable/disable mechanism.
 - Logic regulation for the selected MCU voltage.
-- USB/debug power behavior that does not energize motors.
+- USB telemetry behavior that does not source board power or energize motors.
 - Battery or motor-rail voltage measurement through an MCU ADC.
 - Power LED or visible indicator for logic power.
 - Motor-power or motor-enable LED.
@@ -87,19 +87,20 @@ Not required for Rev A:
 
 ## Logic Power Policy
 
-Rev A should support USB-connected firmware development with motors unable to move.
+Rev A should support USB telemetry while the board is powered from battery or bench supply.
 
 Preferred behavior:
 
-- USB connected, no battery/bench supply: MCU boots, telemetry works, motor drivers cannot energize motors.
+- USB connected, no battery/bench supply: MCU remains off and telemetry is unavailable.
 - Battery/bench connected, USB disconnected: board can run standalone if the logic regulator is powered from the protected battery path.
-- USB and battery/bench connected: logic remains stable and motor rail is available only when motor enable permits it.
+- USB and battery/bench connected: board runs from battery/bench power, and USB is used only as the host telemetry link.
 
-The exact source-selection method is still open. Acceptable options for Rev A:
+Rev A decision:
 
-- simple power mux or ideal-diode OR between USB-derived logic and battery-derived logic
-- jumper-selected logic source during bring-up
-- USB powers only debug/serial and battery-derived regulator powers runtime logic
+- Do not connect `VUSB` to the logic regulator input.
+- Do not diode-OR or mux `VUSB` into `VLOGIC`.
+- Keep `VUSB` local to the USB connector, ESD protection, required VBUS capacitance, and optional MCU VBUS-sense divider.
+- The board must be powered from battery or bench supply before USB telemetry is expected to work.
 
 The schematic must explicitly prevent unsafe backfeeding between USB, battery-derived logic, and any external host.
 
@@ -171,7 +172,7 @@ Grounding:
 
 Bench tests:
 
-1. USB only: confirm MCU/debug powers up and motor rail is off.
+1. USB only: confirm MCU, logic rail, and motor rail remain off.
 2. Battery/bench only: confirm logic rail behavior matches selected source policy.
 3. USB plus current-limited bench supply: confirm no backfeed or unexpected rail voltage.
 4. Reverse-polarity protection sanity check with a protected/current-limited setup.
@@ -194,7 +195,7 @@ Floor tests:
 
 Rev A power architecture is acceptable when:
 
-- USB alone cannot move motors.
+- USB alone cannot power the MCU or move motors.
 - Motor rail can be powered and disabled intentionally.
 - MCU remains alive during motor enable/disable transitions.
 - Motor/battery voltage is measured and logged.
