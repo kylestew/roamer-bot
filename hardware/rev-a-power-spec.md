@@ -164,7 +164,7 @@ Initial telemetry fields:
 
 Protection:
 
-- Input fuse or resettable PTC close to the battery positive entry.
+- Input resettable PTC close to the battery positive entry. Rev A selected part: Littelfuse `MINISMDC260F/16-2`, JLCPCB `C16490`, `1812`, `16 V`, `2.6 A hold`, `5 A trip`.
 - Reverse-polarity protection is optional for the Romi battery-contact path if the mechanical layout prevents reversed battery connection; keep it under consideration for bench/external inputs.
 - Current-limited bring-up path through the bench supply during early tests.
 - Driver overcurrent/thermal protection through selected motor-driver ICs.

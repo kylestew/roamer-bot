@@ -135,7 +135,7 @@ Must add before layout:
 
 - [x] Bulk cap on switched battery/motor rail. Current schematic includes 220uF on `VBAT_SW`.
 - [x] ~10uF ceramic per DRV8838 VM pin, in addition to 0.1uF.
-- [ ] Fuse / resettable PTC in battery path. Protects against PCB shorts, output faults, and bring-up wiring/probing mistakes. Initial target: 16V PTC around 2.5A to 2.6A hold.
+- [x] Fuse / resettable PTC in battery path. Protects against PCB shorts, output faults, and bring-up wiring/probing mistakes. Selected F1: Littelfuse `MINISMDC260F/16-2`, JLCPCB `C16490`, `1812`, `16 V`, `2.6 A hold`, `5 A trip`.
 - [ ] Verify battery-contact polarity against the actual Romi chassis footprint/mechanics during layout.
 - [ ] Verify solderable battery-lug polarity against the actual Romi chassis contacts before routing copper.
 - [ ] Verify J3/J4 pin ordering against the physical motor/encoder harness/headers: motor +/-, encoder VCC, encoder A/B, and GND.

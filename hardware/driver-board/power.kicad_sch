@@ -1869,7 +1869,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Switch:SW_SPST"
+		(symbol "Switch:SW_SPDT"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -1880,7 +1880,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "SW"
-				(at 0 3.175 0)
+				(at 0 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1889,8 +1889,8 @@
 					)
 				)
 			)
-			(property "Value" "SW_SPST"
-				(at 0 -2.54 0)
+			(property "Value" "SW_SPDT"
+				(at 0 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1911,6 +1911,17 @@
 				)
 			)
 			(property "Datasheet" ""
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Switch, single pole double throw"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1921,7 +1932,7 @@
 					)
 				)
 			)
-			(property "Description" "Single Pole Single Throw (SPST) switch"
+			(property "ki_keywords" "switch single-pole double-throw spdt ON-ON"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1932,21 +1943,10 @@
 					)
 				)
 			)
-			(property "ki_keywords" "switch lever"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SW_SPST_0_0"
+			(symbol "SW_SPDT_0_1"
 				(circle
 					(center -2.032 0)
-					(radius 0.508)
+					(radius 0.4572)
 					(stroke
 						(width 0)
 						(type default)
@@ -1957,7 +1957,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.524 0.254) (xy 1.524 1.778)
+						(xy -1.651 0.254) (xy 1.651 2.286)
 					)
 					(stroke
 						(width 0)
@@ -1968,8 +1968,19 @@
 					)
 				)
 				(circle
-					(center 2.032 0)
-					(radius 0.508)
+					(center 2.032 2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 -2.54)
+					(radius 0.4572)
 					(stroke
 						(width 0)
 						(type default)
@@ -1979,9 +1990,20 @@
 					)
 				)
 			)
-			(symbol "SW_SPST_1_1"
+			(symbol "SW_SPDT_1_1"
+				(rectangle
+					(start -3.175 3.81)
+					(end 3.175 -3.81)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at 5.08 2.54 180)
 					(length 2.54)
 					(name "A"
 						(effects
@@ -1999,7 +2021,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 0 180)
+					(at -5.08 0 0)
 					(length 2.54)
 					(name "B"
 						(effects
@@ -2009,6 +2031,24 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2603,6 +2643,12 @@
 		(uuid "9ec3949e-ceef-42a6-9394-53717a10ab32")
 	)
 	(junction
+		(at 97.79 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "076fc30f-38cd-420b-b0f9-e92dddd20f17")
+	)
+	(junction
 		(at 232.41 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2627,6 +2673,12 @@
 		(uuid "2c226789-58ad-46e1-bae0-e20f24ab24e2")
 	)
 	(junction
+		(at 110.49 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "317c370f-09bb-4719-bcad-b6fbcd762fee")
+	)
+	(junction
 		(at 179.07 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2637,12 +2689,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "48494db7-caee-45e7-9e67-af0d8c46d0f4")
-	)
-	(junction
-		(at 110.49 66.04)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "49a87fd6-575d-4048-9543-c82251432525")
 	)
 	(junction
 		(at 97.79 97.79)
@@ -2687,12 +2733,6 @@
 		(uuid "8ab20f07-d58c-4836-b125-e08bcfe154f5")
 	)
 	(junction
-		(at 68.58 66.04)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "90491b01-fefd-4d4e-963e-17e16b139bc5")
-	)
-	(junction
 		(at 121.92 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2717,12 +2757,6 @@
 		(uuid "b1c57452-157c-4534-b10d-3d1f37ecc193")
 	)
 	(junction
-		(at 97.79 66.04)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b4d69cce-60dd-4a50-8cc1-aef3817a440d")
-	)
-	(junction
 		(at 198.12 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2740,6 +2774,26 @@
 		(color 0 0 0 0)
 		(uuid "ddf99858-242f-4199-8240-2f8e51fd2015")
 	)
+	(junction
+		(at 60.96 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ea1e1a09-dbd9-4358-ae5e-f92185d7aa6c")
+	)
+	(no_connect
+		(at 85.09 68.58)
+		(uuid "5b3a8502-0225-4296-8651-a8e927db19e0")
+	)
+	(wire
+		(pts
+			(xy 88.9 63.5) (xy 88.9 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "003e4f0e-ce53-48d2-82a4-7ce53f341ae6")
+	)
 	(wire
 		(pts
 			(xy 160.02 82.55) (xy 160.02 85.09)
@@ -2752,16 +2806,6 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 66.04) (xy 97.79 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "056a0b33-52c3-4561-84a4-54b89b15ef8d")
-	)
-	(wire
-		(pts
 			(xy 160.02 76.2) (xy 160.02 82.55)
 		)
 		(stroke
@@ -2769,6 +2813,16 @@
 			(type default)
 		)
 		(uuid "08287063-b283-47c5-a490-8b93ad0f353d")
+	)
+	(wire
+		(pts
+			(xy 88.9 66.04) (xy 97.79 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a5240af-7ce9-4aa8-89d7-2cb09ebfd56c")
 	)
 	(wire
 		(pts
@@ -2982,16 +3036,6 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 66.04) (xy 74.93 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "542f0709-112c-469d-85f5-4e93659fe91c")
-	)
-	(wire
-		(pts
 			(xy 232.41 68.58) (xy 232.41 63.5)
 		)
 		(stroke
@@ -3002,13 +3046,13 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 66.04) (xy 110.49 66.04)
+			(xy 97.79 66.04) (xy 110.49 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "61c5e836-11ca-4333-b1e7-7fc34f9b2947")
+		(uuid "62c20b7d-bcff-45aa-85a1-9eacda42cac0")
 	)
 	(wire
 		(pts
@@ -3102,7 +3146,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 66.04) (xy 68.58 66.04)
+			(xy 58.42 66.04) (xy 60.96 66.04)
 		)
 		(stroke
 			(width 0)
@@ -3242,6 +3286,26 @@
 	)
 	(wire
 		(pts
+			(xy 85.09 63.5) (xy 88.9 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1962869-1b0b-4357-b34b-c64b9cb40324")
+	)
+	(wire
+		(pts
+			(xy 60.96 66.04) (xy 74.93 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3aaac00-52fd-4c32-a7d3-2089fbbac7e7")
+	)
+	(wire
+		(pts
 			(xy 259.08 68.58) (xy 265.43 68.58)
 		)
 		(stroke
@@ -3269,6 +3333,16 @@
 			(type default)
 		)
 		(uuid "bd83a392-3ba1-407a-8b68-e51894217cdf")
+	)
+	(wire
+		(pts
+			(xy 97.79 66.04) (xy 97.79 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bef38c20-1b61-4b1f-8103-5526ad227091")
 	)
 	(wire
 		(pts
@@ -3399,6 +3473,16 @@
 			(type default)
 		)
 		(uuid "f835d974-1a8a-426b-989b-be2a03c79fa6")
+	)
+	(label "VBAT_FUSED"
+		(at 60.96 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d872c626-b3a7-4d34-98d7-c4ae6b8e977d")
 	)
 	(global_label "BATLEV"
 		(shape input)
@@ -3820,7 +3904,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "CustomParts:Romi_Chassis_BatteryContactPair_2Slot_10_44mm_FirstPass"
 			(at 39.37 77.216 90)
 			(hide yes)
 			(show_name no)
@@ -3831,7 +3915,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.pololu.com/file/0J1201/power-distribution-board-for-romi-chassis-dimension-diagram.pdf"
 			(at 39.37 77.216 90)
 			(hide yes)
 			(show_name no)
@@ -3876,28 +3960,6 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 39.37 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 39.37 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 39.37 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -4249,7 +4311,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "CustomParts:Romi_Chassis_BatteryContactPair_2Slot_10_44mm_FirstPass"
 			(at 39.37 94.996 90)
 			(hide yes)
 			(show_name no)
@@ -4260,7 +4322,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.pololu.com/file/0J1201/power-distribution-board-for-romi-chassis-dimension-diagram.pdf"
 			(at 39.37 94.996 90)
 			(hide yes)
 			(show_name no)
@@ -5888,7 +5950,7 @@
 				)
 			)
 		)
-		(property "Value" "STATUS"
+		(property "Value" "PWR_ON_LED"
 			(at 256.8575 63.5 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5964,7 +6026,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C12624"
+		(property "JLCPCB" "C2286"
 			(at 255.27 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -6002,7 +6064,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_SPST")
+		(lib_id "Switch:SW_SPDT")
 		(at 80.01 66.04 0)
 		(unit 1)
 		(body_style 1)
@@ -6012,8 +6074,18 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "bb3e1abf-0d0e-4c01-850f-eb5c9abf3dfd")
+		(uuid "be4a99fe-e0bb-4906-a82c-bed652fd7c32")
 		(property "Reference" "SW2"
+			(at 80.01 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MT-O-102-C003-N003-RS"
 			(at 80.01 59.69 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6023,17 +6095,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_SPST"
-			(at 80.01 62.23 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
+		(property "Footprint" "CustomParts:SW_SPDT_Angled_YuenFung_MT-O-102-C003-N003-RS"
 			(at 80.01 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -6044,7 +6106,18 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "${KIPRJMOD}/datasheets/C1788495.pdf"
+			(at 80.01 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, single pole double throw - MT-O-102-C003-N003-RS"
 			(at 80.01 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -6055,7 +6128,7 @@
 				)
 			)
 		)
-		(property "Description" "Single Pole Single Throw (SPST) switch"
+		(property "JLCPCB" "C1788495"
 			(at 80.01 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -6066,7 +6139,7 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
+		(property "MPN" "MT-O-102-C003-N003-RS"
 			(at 80.01 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -6077,7 +6150,7 @@
 				)
 			)
 		)
-		(property "KLC_S4.1" ""
+		(property "Manufacturer" "YUE FUNG"
 			(at 80.01 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -6088,11 +6161,25 @@
 				)
 			)
 		)
-		(pin "1"
-			(uuid "3a0afa92-a760-472c-9119-d6f0fa970f48")
+		(property "JLCPCB Type" "Extended"
+			(at 80.01 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
 		(pin "2"
-			(uuid "d3833cb3-8123-44e4-8a2e-0af3280f2666")
+			(uuid "e454368a-fda2-4ff8-87b8-e39dca7d4813")
+		)
+		(pin "1"
+			(uuid "ca8c3c43-1b70-4e0b-a8fa-18f7cdf594fb")
+		)
+		(pin "3"
+			(uuid "9a9fc5aa-56ad-4e6d-bb81-a682e5274fb2")
 		)
 		(instances
 			(project "driver-board"
@@ -6626,7 +6713,7 @@
 	)
 	(symbol
 		(lib_id "PCM_4ms_Power-symbol:PWR_FLAG")
-		(at 68.58 66.04 0)
+		(at 60.96 66.04 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6637,7 +6724,7 @@
 		(fields_autoplaced yes)
 		(uuid "e4f71de6-80a0-4e80-a4cd-7293bdbd2b89")
 		(property "Reference" "#FLG02"
-			(at 68.58 64.135 0)
+			(at 60.96 67.945 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6648,17 +6735,18 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 68.58 60.96 0)
+			(at 63.5 67.3099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
-			(at 68.58 66.04 0)
+			(at 60.96 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6669,7 +6757,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 68.58 66.04 0)
+			(at 60.96 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6680,7 +6768,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 68.58 66.04 0)
+			(at 60.96 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

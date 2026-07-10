@@ -182,7 +182,7 @@ Good telemetry should expose those effects instead of hiding them. That means Re
 
 - Exact battery chemistry for Rev A testing.
 - `VLOGIC` is expected to be 3.3 V for STM32; decide whether any separate 5 V rail is needed.
-- Exact resettable PTC/fuse part and footprint.
+- F1 resettable PTC selected: Littelfuse `MINISMDC260F/16-2`, JLCPCB `C16490`, `1812`, `16 V`, `2.6 A hold`, `5 A trip`.
 - Whether to add optional reverse-polarity protection or a bypass footprint for non-Romi power inputs.
 - Whether to add a Rev B hardware motor-power switch/load switch after Rev A testing.
 - Whether Rev A includes current limiting beyond the motor-driver ICs.
