@@ -146,17 +146,20 @@ Poor fit for the integrated Rev A board because Rev A needs battery-aware robot 
 
 ## Recommendation
 
-Use Approach 2 for Rev A: minimal split battery/USB power.
+Use a simplified battery-powered Rev A architecture.
 
 The Rev A power system should be simple enough to understand from the schematic, but complete enough to run the robot safely:
 
-- USB powers logic/debug only.
-- Battery or bench supply powers motors.
-- Motor power has reverse-polarity protection.
-- Motor power has a clear enable/disable path.
+- USB is telemetry/debug data only and does not power the board.
+- Battery or bench supply powers a switched whole-board rail.
+- The switched whole-board rail feeds the motor-driver `VM` pins and the 3.3 V logic regulator.
+- Motor supply can be online whenever the board is powered.
+- The MCU owns motor disable by holding DRV8838 `SLEEP_N` low and PWM/EN inactive until commands are valid.
+- DRV8838 `SLEEP_N` must have hardware pulldowns so reset and boot default to motors disabled.
+- The battery path has a fuse or resettable PTC.
+- Reverse-polarity protection is optional for the fixed Romi battery-contact path, but should be reconsidered for any external bench/battery connector.
 - The MCU can measure motor/battery voltage.
-- The MCU can know or infer whether motor power is available.
-- Logic remains alive during motor disable and command timeout.
+- Logic remains alive during firmware motor disable and command timeout because those states do not remove board power.
 - Test points exist for every rail.
 
 Do not copy the full Romi 32U4 latching power switch, Raspberry Pi power path, or USB/battery power mux for Rev A unless a later requirement forces it.
@@ -179,10 +182,11 @@ Good telemetry should expose those effects instead of hiding them. That means Re
 
 - Exact battery chemistry for Rev A testing.
 - `VLOGIC` is expected to be 3.3 V for STM32; decide whether any separate 5 V rail is needed.
-- Exact reverse-polarity protection part or topology.
-- Exact motor enable method: switch, load switch, high-side switch, fuse plus driver sleep, or jumper for first bring-up.
+- Exact resettable PTC/fuse part and footprint.
+- Whether to add optional reverse-polarity protection or a bypass footprint for non-Romi power inputs.
+- Whether to add a Rev B hardware motor-power switch/load switch after Rev A testing.
 - Whether Rev A includes current limiting beyond the motor-driver ICs.
-- Whether USB and battery logic sources need an ideal-diode OR, power mux, jumper, or data-only USB strategy.
+- Whether USB VBUS should be sensed by the MCU, while still not powering logic.
 
 ## References
 

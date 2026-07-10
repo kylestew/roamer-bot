@@ -147,6 +147,8 @@ The custom board does not need to clone the Romi 32U4 board outline, but these f
 - Mounting holes: preserve the relevant Romi chassis mounting locations so the board bolts directly to the chassis.
 - Encoder mating: preserve the location/orientation of the low-profile encoder headers if the encoder pins point down toward the chassis.
 - Battery contact interface: account for the built-in 6xAA bay and battery contacts.
+- Battery lug polarity: verify the solderable battery lugs against the actual Romi chassis before routing the battery entry path.
+- Motor/encoder pin order: verify the exact left/right connector pin ordering against the physical motor and encoder-board assembly before ordering Rev A.
 - Power access: include a clear way to switch motor/battery power and monitor battery voltage.
 - USB/debug access: place USB/programming/debug connectors where they remain accessible after the board is mounted.
 - Status visibility: keep power, heartbeat, motor-enable, and fault indication visible from above.

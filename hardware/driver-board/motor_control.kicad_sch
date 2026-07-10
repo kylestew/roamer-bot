@@ -2621,7 +2621,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 152.4 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -2643,7 +2643,29 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" "-55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±1%"
+			(at 152.4 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C25803"
+			(at 152.4 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Type" "Basic"
 			(at 152.4 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -2725,7 +2747,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical"
 			(at 195.58 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -2842,7 +2864,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 92.71 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -2865,6 +2887,28 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 92.71 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C25804"
+			(at 92.71 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Type" "Basic"
 			(at 92.71 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -2947,7 +2991,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 83.82 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -2970,6 +3014,28 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 83.82 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C25804"
+			(at 83.82 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Type" "Basic"
 			(at 83.82 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -3040,7 +3106,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1u"
+		(property "Value" "100n"
 			(at 66.04 62.2362 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3051,7 +3117,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 63.5 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -3073,7 +3139,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "Unpolarized capacitor"
+			(at 63.5 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C14663"
+			(at 63.5 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Type" "Basic"
 			(at 63.5 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -3311,7 +3399,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical"
 			(at 57.15 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -3495,7 +3583,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1u"
+		(property "Value" "100n"
 			(at 200.66 129.5462 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3506,7 +3594,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 198.12 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -3528,7 +3616,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "Unpolarized capacitor"
+			(at 198.12 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C14663"
+			(at 198.12 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Type" "Basic"
 			(at 198.12 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -3836,7 +3946,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1u"
+		(property "Value" "100n"
 			(at 57.15 62.2362 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3847,7 +3957,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 54.61 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -3869,7 +3979,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "Unpolarized capacitor"
+			(at 54.61 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C14663"
+			(at 54.61 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Type" "Basic"
 			(at 54.61 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -4559,7 +4691,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 160.02 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -4582,6 +4714,28 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 160.02 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C25804"
+			(at 160.02 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Type" "Basic"
 			(at 160.02 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -4731,7 +4885,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1u"
+		(property "Value" "100n"
 			(at 209.55 129.5462 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4742,7 +4896,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 207.01 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -4764,7 +4918,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "Unpolarized capacitor"
+			(at 207.01 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C14663"
+			(at 207.01 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Type" "Basic"
 			(at 207.01 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -4959,7 +5135,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C76661"
+		(property "JLCPCB" "C13585"
 			(at 189.23 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -4982,6 +5158,17 @@
 			)
 		)
 		(property "KLC_S4.1" ""
+			(at 189.23 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Type" "Basic"
 			(at 189.23 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -5121,7 +5308,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 168.91 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -5144,6 +5331,28 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 168.91 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C25804"
+			(at 168.91 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Type" "Basic"
 			(at 168.91 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -5303,7 +5512,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 100.33 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -5325,7 +5534,29 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" "-55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±1%"
+			(at 100.33 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C25803"
+			(at 100.33 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Type" "Basic"
 			(at 100.33 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -5992,7 +6223,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C76661"
+		(property "JLCPCB" "C13585"
 			(at 45.72 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -6015,6 +6246,17 @@
 			)
 		)
 		(property "KLC_S4.1" ""
+			(at 45.72 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Type" "Basic"
 			(at 45.72 60.96 0)
 			(hide yes)
 			(show_name no)

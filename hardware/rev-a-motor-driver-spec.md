@@ -31,7 +31,7 @@ Driver rating target:
 
 - Per-motor driver should tolerate at least the Romi motor stall current long enough for fault handling and test mistakes.
 - Driver absolute maximum motor voltage must exceed the highest expected battery voltage with margin.
-- If using the six-AA Romi bay, account for fresh alkaline voltage as well as NiMH voltage.
+- Battery chemistry is NiMH only (six-AA bay, ~7.2 V nominal, ~8.4 V fresh charge). Alkaline is excluded: ~9.6 V fresh pack erodes DRV8838 VM margin (11 V op / 12 V abs max) and pushes stall current to ~2.7 A vs the 1.8 A peak rating. See battery chemistry decision in [`rev-a-power-spec.md`](rev-a-power-spec.md).
 
 ## Required Driver Features
 
@@ -91,7 +91,7 @@ Default stop behavior:
 
 - Set PWM to 0.
 - Disable drive or coast unless the chosen driver and tests prove that braking is safer and thermally acceptable.
-- Keep logic and telemetry alive so the host can see the timeout state.
+- Keep logic and telemetry alive so the host can see the timeout state while whole-board power remains on.
 
 Fault behavior:
 
@@ -116,32 +116,39 @@ Remaining schematic/layout work:
 - Apply the DRV8838 layout guide: local VM/VCC bypass, compact motor-current loops, and exposed-pad GND.
 - Assign footprints for motor-driver passives, motor/encoder connectors, bulk capacitance, and test points.
 - Verify the left/right Romi encoder connector physical orientation against the actual encoder boards before layout/order.
+- Verify motor/encoder connector pin ordering against the actual Romi motor plus encoder-board assembly before layout/order.
 
 Board-level motor-power section should include:
 
 - Battery input from the Romi contacts.
-- Reverse-polarity protection or a bring-up-safe equivalent.
-- Motor power switch or enable path.
+- Input fuse or resettable PTC near the battery entry.
+- Whole-board power switch.
+- Firmware motor-disable path through DRV8838 `SLEEP_N` and PWM/EN control.
 - Battery voltage sense to the MCU.
 - Ground strategy that gives motor current a low-impedance return path without corrupting encoder signals.
 
 ## Motor Power Path Needed Work
 
-From schematic review 2026-07-06 (`driver-board/power.kicad_sch`, `driver-board/motor_control.kicad_sch`). VM path currently: BATT (BT1+BT2, 6xAA) -> SW1 (SPST) -> `+VSW` -> DRV8838 VM. Only decoupling present.
+Updated Rev A decision: the main battery switch is whole-board power. Motor-driver `VM` can remain online whenever the board is powered; the MCU disables motor output through DRV8838 `SLEEP_N` and PWM/EN control. This is acceptable for Rev A if the `SLEEP_N` pulldowns keep the drivers asleep through reset and firmware initializes motor pins to a disabled state before accepting commands.
 
 Must add before layout:
 
-- [ ] Bulk cap on `+VSW` entry. ~100uF electrolytic/polymer. Prevents VM collapse / DRV8838 UVLO on current spikes. Only 4x 0.1uF exist today, no bulk.
-- [ ] ~10uF ceramic per DRV8838 VM pin, in addition to existing 0.1uF.
-- [ ] Reverse-polarity protection in battery path (P-FET preferred, or Schottky). None present. Creates the missing `VBAT_PROTECTED` node between raw battery and switch.
-- [ ] Fuse / resettable PTC in battery path (~2-3A hold). Protects against OUT short and bring-up wiring mistakes.
-- [ ] Fix battery polarity. As wired, `+BATT` net ties to BT cathode (BT1 pin2) and GND to BT anode (BT2 pin1). Stack drawn reversed. Flip BT1/BT2 or nets are backwards on PCB.
+- [x] Bulk cap on switched battery/motor rail. Current schematic includes 220uF on `VBAT_SW`.
+- [x] ~10uF ceramic per DRV8838 VM pin, in addition to 0.1uF.
+- [ ] Fuse / resettable PTC in battery path. Protects against PCB shorts, output faults, and bring-up wiring/probing mistakes. Initial target: 16V PTC around 2.5A to 2.6A hold.
+- [ ] Verify battery-contact polarity against the actual Romi chassis footprint/mechanics during layout.
+- [ ] Verify solderable battery-lug polarity against the actual Romi chassis contacts before routing copper.
+- [ ] Verify J3/J4 pin ordering against the physical motor/encoder harness/headers: motor +/-, encoder VCC, encoder A/B, and GND.
+- [ ] Verify left/right connector mirroring and orientation so encoder A/B and motor polarity are not swapped by board-side placement.
 
 Verify / decide:
 
-- [ ] SW1 current rating >=3A (carries both motors + inrush). Mechanical-only rail cutoff; firmware kill relies on nSLEEP alone. OK Rev A; consider MCU load switch Rev B.
+- [ ] SW2 current rating >=3A (carries both motors, buck input, and inrush). It is whole-board power, not a dedicated motor kill switch.
+- [ ] Confirm DRV8838 `SLEEP_N` pulldowns are present, routed close enough to be reliable, and strong enough for reset/boot default-off behavior.
+- [ ] Confirm firmware watchdog, command timeout, and startup GPIO sequencing are treated as part of the Rev A motor safety path.
 - [ ] DRV8838 stall headroom at max VMOTOR. 1.8A max vs ~1.67A stall at 6V. Confirm or pick higher-current driver with fault output.
 - [ ] `+VSW` TVS not needed if bulk cap + body diodes suffice; confirm on bench.
+- [ ] Reverse-polarity protection can be omitted for the Romi battery-contact path if the physical battery/contact layout prevents reversed input. Reconsider if adding external battery or bench connectors.
 
 Encoder power (schematic is correct as drawn, keep it): Romi Encoder Pair Kit (#3542) VCC = 3.5-18V, so `+3V3` is below the minimum — encoder VCC must be >=3.5V. Outputs A/B are open-drain; pulling them to `+3V3` (R3-R6, 10k) caps swing at 3.3V, STM32-safe. VCC=+5V / pull-up=+3V3 split is the right interface, no level shifter needed.
 
