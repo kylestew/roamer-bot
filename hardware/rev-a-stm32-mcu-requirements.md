@@ -72,7 +72,7 @@ ENC_R_B        right encoder channel B
 
 The DRV8838 logic rail is `+3V3`, so the MCU can drive `PH`, `EN`, and `SLEEP_N` directly.
 
-The Romi encoder boards are powered from `+5V`, but their A/B outputs are open-drain and pulled up to `+3V3`. The MCU therefore sees normal 3.3 V logic levels on all encoder inputs.
+The Romi encoder boards are powered from the switched battery rail (`VBAT_SW` / `+VSW`) for Rev A, but their A/B outputs are open-drain and pulled up to `+3V3`. The MCU therefore sees normal 3.3 V logic levels on all encoder inputs. Firmware should use the battery-level ADC reading to decide when encoder VCC is too close to the encoder 3.5 V minimum to trust counts.
 
 ## Minimum Pin Budget
 

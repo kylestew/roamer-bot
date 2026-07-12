@@ -26,7 +26,7 @@ Rev A should think in named rails:
 - `VMOTOR`: switched/protected motor rail feeding the H-bridges.
 - `VLOGIC`: regulated logic rail for the MCU and motor-driver logic inputs.
 - `VUSB`: USB bus power from the host computer.
-- `VENC`: encoder supply, probably the same as `VLOGIC` unless the encoder boards require a different voltage.
+- `VENC`: encoder supply. Rev A uses the switched battery rail for encoder VCC because the Romi encoder boards accept 3.5-18 V, while their open-drain A/B outputs are pulled up to 3.3 V for the MCU.
 
 The exact names can change in KiCad, but the design should keep the concepts separate.
 

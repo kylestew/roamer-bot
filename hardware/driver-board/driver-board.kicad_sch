@@ -3052,6 +3052,105 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "PCM_4ms_Power-symbol:PWR_FLAG"
 			(power global)
 			(pin_numbers
@@ -4194,12 +4293,6 @@
 		(uuid "01f4459a-1adc-4092-a10e-3f9ef20f7f94")
 	)
 	(junction
-		(at 260.35 153.67)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "02f15eb0-4c40-4af7-919c-3c6b69939a61")
-	)
-	(junction
 		(at 151.13 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4342,6 +4435,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d6ee2c3d-4f6e-4cc8-aeb4-002b9f63e0a2")
+	)
+	(junction
+		(at 260.35 153.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e93dc37e-332f-4fbe-87f3-a9a512963905")
 	)
 	(junction
 		(at 25.4 87.63)
@@ -5185,7 +5284,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 135.89) (xy 190.5 137.16)
+			(xy 190.5 135.89) (xy 190.5 139.7)
 		)
 		(stroke
 			(width 0)
@@ -5322,6 +5421,16 @@
 			(type default)
 		)
 		(uuid "d319713d-8129-4da7-b486-aaa367c96dd1")
+	)
+	(wire
+		(pts
+			(xy 260.35 153.67) (xy 260.35 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d48d29a1-7c50-4126-a730-8302dbb17762")
 	)
 	(wire
 		(pts
@@ -6169,7 +6278,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 190.5 137.16 0)
+		(at 190.5 139.7 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -6181,7 +6290,7 @@
 		(fields_autoplaced yes)
 		(uuid "0764d097-c790-42a4-bac8-bf91fae55502")
 		(property "Reference" "#PWR010"
-			(at 190.5 143.51 0)
+			(at 190.5 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6192,7 +6301,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 190.5 142.24 0)
+			(at 190.5 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6203,7 +6312,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 190.5 137.16 0)
+			(at 190.5 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6214,7 +6323,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 190.5 137.16 0)
+			(at 190.5 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6225,7 +6334,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 190.5 137.16 0)
+			(at 190.5 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6257,10 +6366,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "08e3066e-390d-4232-aec8-d69559849212")
 		(property "Reference" "R8"
-			(at 246.38 74.93 90)
+			(at 244.602 79.248 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6270,7 +6378,7 @@
 			)
 		)
 		(property "Value" "22"
-			(at 246.38 77.47 90)
+			(at 248.158 79.248 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6324,28 +6432,6 @@
 			)
 		)
 		(property "JLCPCB Type" "Basic"
-			(at 246.38 81.28 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 246.38 81.28 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 246.38 81.28 90)
 			(hide yes)
 			(show_name no)
@@ -6428,28 +6514,6 @@
 			)
 		)
 		(property "Description" "Fiducial Marker"
-			(at 137.16 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 137.16 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 137.16 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -6558,28 +6622,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 152.4 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 152.4 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "fd14bd84-e3f4-4962-8cc9-8728c826aa59")
 		)
@@ -6674,28 +6716,6 @@
 			)
 		)
 		(property "JLCPCB Type" "Basic"
-			(at 46.99 34.29 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 46.99 34.29 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 46.99 34.29 90)
 			(hide yes)
 			(show_name no)
@@ -6811,28 +6831,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 139.7 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 139.7 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "ec06676a-f78e-41d2-9b85-0e1fac2082a5")
 		)
@@ -6843,6 +6841,82 @@
 			(project "driver-board"
 				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
 					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 16.51 173.99 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "18d12a13-4fd4-48be-8dc9-c9b2bcc0a2a1")
+		(property "Reference" "H1"
+			(at 19.05 172.7199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 19.05 175.2599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "CustomParts:MountingHole_2.3mm_2-56"
+			(at 16.51 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 16.51 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 16.51 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "driver-board"
+				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
+					(reference "H1")
 					(unit 1)
 				)
 			)
@@ -6937,10 +7011,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "28c767bf-d6c6-4161-979c-36405b2f09ff")
 		(property "Reference" "R9"
-			(at 246.38 77.47 90)
+			(at 244.602 86.106 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6950,7 +7023,7 @@
 			)
 		)
 		(property "Value" "22"
-			(at 246.38 80.01 90)
+			(at 248.412 86.106 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7004,28 +7077,6 @@
 			)
 		)
 		(property "JLCPCB Type" "Basic"
-			(at 246.38 83.82 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 246.38 83.82 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 246.38 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -7355,28 +7406,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 149.86 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 149.86 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(instances
 			(project "driver-board"
 				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
@@ -7444,28 +7473,6 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 200.66 130.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 200.66 130.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 200.66 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -7621,28 +7628,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 59.69 55.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 59.69 55.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "dd9b1cd3-75cb-47e2-8e8d-21f1bc5d42e8")
 		)
@@ -7747,28 +7732,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 46.99 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 46.99 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "6e85d9ed-8ecd-4ec2-a0c8-906d916b2e20")
 		)
@@ -7840,28 +7803,6 @@
 			)
 		)
 		(property "Description" "USB 2.0-only 16P Type-C Receptacle connector"
-			(at 260.35 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 260.35 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 260.35 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -8191,28 +8132,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 162.56 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 162.56 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "937ef997-1410-4c82-8743-4bcd35e977d1")
 		)
@@ -8223,6 +8142,82 @@
 			(project "driver-board"
 				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
 					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 16.51 180.34 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6ff01dc5-f3d0-4b09-b9a9-18b592604a30")
+		(property "Reference" "H2"
+			(at 19.05 179.0699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 19.05 181.6099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "CustomParts:MountingHole_2.3mm_2-56"
+			(at 16.51 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 16.51 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 16.51 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "driver-board"
+				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
+					(reference "H2")
 					(unit 1)
 				)
 			)
@@ -8308,28 +8303,6 @@
 			)
 		)
 		(property "JLCPCB Type" "Basic"
-			(at 151.13 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 151.13 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 151.13 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -8444,28 +8417,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 25.4 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 25.4 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "04848b48-0edd-448d-80b6-467ad3e9247c")
 		)
@@ -8561,28 +8512,6 @@
 			)
 		)
 		(property "JLCPCB Type" "Basic"
-			(at 128.27 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 128.27 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 128.27 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -8756,28 +8685,6 @@
 			)
 		)
 		(property "JLCPCB" "C8304"
-			(at 104.14 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 104.14 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 104.14 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -9188,28 +9095,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 60.96 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 60.96 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "c049400d-bf66-4de9-b4b7-0ff458872bd9")
 		)
@@ -9383,28 +9268,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 173.99 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 173.99 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "JLCPCB Type" "Basic"
 			(at 173.99 35.56 0)
 			(hide yes)
@@ -9426,6 +9289,158 @@
 			(project "driver-board"
 				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
 					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 16.51 193.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "950dc61a-f018-4e4e-8552-897429896613")
+		(property "Reference" "H4"
+			(at 19.05 191.7699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 19.05 194.3099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "CustomParts:MountingHole_2.3mm_2-56"
+			(at 16.51 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 16.51 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 16.51 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "driver-board"
+				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 16.51 186.69 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "98d5b9b4-e5f4-4b48-bd35-e2156a316877")
+		(property "Reference" "H3"
+			(at 19.05 185.4199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 19.05 187.9599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "CustomParts:MountingHole_2.3mm_2-56"
+			(at 16.51 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 16.51 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 16.51 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "driver-board"
+				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -9465,7 +9480,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD"
 			(at 85.09 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -9498,18 +9513,7 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 85.09 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
+		(property "JLCPCB" "C2932107"
 			(at 85.09 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -9626,28 +9630,6 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 45.72 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 45.72 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 45.72 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -9919,28 +9901,6 @@
 			)
 		)
 		(property "JLCPCB" "C13585"
-			(at 217.17 73.66 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 217.17 73.66 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 217.17 73.66 90)
 			(hide yes)
 			(show_name no)
@@ -10231,28 +10191,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 190.5 130.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 190.5 130.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "JLCPCB" "C23186"
 			(at 190.5 130.81 0)
 			(hide yes)
@@ -10435,28 +10373,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 162.56 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 162.56 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(instances
 			(project "driver-board"
 				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
@@ -10534,28 +10450,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 35.56 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 35.56 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "JLCPCB" "C21190"
 			(at 35.56 115.57 0)
 			(hide yes)
@@ -10595,7 +10489,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 260.35 153.67 0)
+		(at 260.35 156.21 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -10607,7 +10501,7 @@
 		(fields_autoplaced yes)
 		(uuid "f68d5182-710e-4d76-9ebd-ae7344a96dd8")
 		(property "Reference" "#PWR015"
-			(at 260.35 160.02 0)
+			(at 260.35 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10618,7 +10512,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 260.35 158.75 0)
+			(at 260.35 161.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10628,7 +10522,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 260.35 153.67 0)
+			(at 260.35 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10639,7 +10533,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 260.35 153.67 0)
+			(at 260.35 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10650,7 +10544,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 260.35 153.67 0)
+			(at 260.35 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

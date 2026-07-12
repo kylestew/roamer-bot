@@ -56,12 +56,14 @@ Use these conceptual rails in the schematic:
 - `VMOTOR`: motor-driver supply, normally the same net as `VBAT_SW` for Rev A.
 - `VUSB`: USB bus voltage, used for USB protection and optional presence sensing only.
 - `VLOGIC`: regulated MCU/logic rail derived from `VBAT_SW`.
-- `VENC`: encoder board supply, derived from the board power architecture; exact rail remains a layout/schematic decision.
+- `VENC`: encoder board supply. Rev A ties this to `VBAT_SW` / `VMOTOR`, not to `+3V3` and not to a separate `+5V` regulator.
 
 Rules:
 
 - `VMOTOR` must not be sourced from USB.
 - `VLOGIC` is sourced from the battery/bench-derived regulator, not USB.
+- Encoder VCC is sourced from `VBAT_SW`; encoder A/B outputs remain pulled up to `VLOGIC` / `+3V3` for STM32-safe input levels.
+- Battery-level telemetry is also the encoder-power sanity check. Firmware should set a low-voltage threshold above the encoder 3.5V minimum and avoid trusting encoder counts below that threshold.
 - In Rev A, the main power switch is a whole-board switch. Turning it off removes both motor power and MCU telemetry.
 - The MCU remains powered while firmware disables motor output with driver sleep/PWM, because that disable state does not remove `VBAT_SW`.
 - Motor-driver logic supply should follow `VLOGIC`; motor-driver motor supply should follow `VMOTOR`.

@@ -1,6 +1,6 @@
 # Rev A Schematic Wrap-Up TODO
 
-Use this as the gate before starting PCB routing/layout in earnest.
+Use this as the gate before starting PCB routing/layout in earnest, and as the checklist for layout-stage verification before fabrication.
 
 Current ERC status: clean as of the latest KiCad CLI run, with `0 violations`.
 
@@ -22,7 +22,7 @@ Current ERC status: clean as of the latest KiCad CLI run, with `0 violations`.
 - [ ] Confirm motor PWM/EN and PH pins default to inactive states in hardware and firmware pin planning.
 - [ ] Confirm each DRV8838 has local `VM` and logic-supply bypass capacitors with appropriate footprints.
 - [ ] Confirm shared `+VSW`/motor-rail bulk capacitance is present, sized, and has a physical footprint suitable for motor transients.
-- [ ] Add or verify ADC battery-sense filtering capacitor and confirm the divider cannot exceed the MCU ADC limit at maximum pack voltage.
+- [x] Rev A decision: omit the BATLEV filtering capacitor; precise battery measurement is not important for this design. The 100 kΩ/33 kΩ divider remains safely below the MCU ADC limit at maximum pack voltage.
 - [ ] Verify USB policy in schematic: USB is telemetry/data only and does not power the board or motors.
 - [ ] Confirm power LED, heartbeat LED, motor-enable/status LED, and fault/status visibility are represented in the schematic.
 - [ ] Confirm enough test points exist for bring-up: `VBAT`, `+VSW`, `+3V3`, `GND`, SWD, UART/USB, motor outputs, `SLEEP_N`, PWM/EN, PH, fault, encoder A/B, and battery ADC.
@@ -34,6 +34,37 @@ Current ERC status: clean as of the latest KiCad CLI run, with `0 violations`.
 - [ ] Check access to the main power switch, USB connector, SWD header, reset/boot controls, and probe points.
 - [ ] Confirm the `SW2` toggle body/lever overhang clears the Romi chassis and is reachable at the board edge.
 - [ ] Decide whether any bench-power input is included; if yes, re-evaluate reverse-polarity protection for that input.
+
+## Verify During Placement And Routing
+
+- [ ] Start with mechanical placement: board outline, mounting holes, battery contacts, motor/encoder connectors, `SW2`, USB, SWD, reset/boot controls, and required keepouts.
+- [ ] Place `BT1`/`BT2` so the physical Romi battery contacts really form the intended series chain: `BT1+ -> VBAT`, `BT1- -> BT2+`, `BT2- -> GND`.
+- [ ] Verify `SW2` pad numbering against the actual toggle switch footprint before routing copper: common pin to `VBAT_SAFE`, selected throw to `VBAT_SW`, unused throw no-connect.
+- [ ] Place input protection in order and physically close together: battery positive -> F1 PTC -> Q1 reverse-polarity MOSFET -> `VBAT_SAFE` -> `SW2`.
+- [ ] Route high-current battery and motor paths first with short, wide traces/pours: battery entry, F1, Q1, `SW2`, `VBAT_SW`, DRV8838 `VM`, motor outputs, and motor-current returns.
+- [ ] Keep motor-current loops compact and away from encoder A/B, USB, SWD, crystal, reset, and BATLEV ADC routing.
+- [ ] Place DRV8838 `VM` and logic bypass capacitors tight to their IC pins; place the shared `VBAT_SW` bulk capacitor near the motor-driver supply entry/cluster.
+- [ ] Place the LMR51430 buck loop tightly: input cap, regulator, bootstrap cap, inductor, output caps, feedback divider, and ground return per datasheet layout guidance.
+- [ ] Keep the buck switch node small and away from encoder, USB, crystal, SWD, reset, and ADC traces.
+- [ ] Route BATLEV as a reasonably quiet ADC node after the divider; no dedicated filter capacitor is required for Rev A.
+- [ ] Route encoder VCC from `VBAT_SW` with awareness that it is a noisy battery rail; keep encoder A/B traces referenced to quiet ground and pulled up to `+3V3`.
+- [ ] Verify left/right motor and encoder connector orientation in the PCB view so motor polarity, encoder VCC, encoder A/B, and GND are not mirrored or swapped.
+- [ ] Put bring-up test points where probes can physically reach them: `VBAT`, `VBAT_SAFE`, `VBAT_SW`, `+3V3`, `GND`, BATLEV, motor outputs, `SLEEP_N`, PWM/EN, PH, encoder A/B.
+
+## Verify After Routing Before Fabrication
+
+- [ ] Run DRC with the selected JLCPCB design rules and resolve every real clearance, unconnected, courtyard, and silkscreen issue.
+- [ ] Re-run ERC after any schematic edits made during layout and keep the report at `0 violations`.
+- [ ] Inspect the final routed power path in PCB/net-highlight view: `BT1+ -> F1 -> Q1 -> VBAT_SAFE -> SW2 -> VBAT_SW`.
+- [ ] Inspect the final routed battery series path: `BT1- -> BT2+`, and `BT2- -> GND`.
+- [ ] Inspect reverse-polarity MOSFET routing against the AO3401A pinout and footprint: drain to fused battery input, source to protected rail, gate to GND.
+- [ ] Inspect `SW2` in 3D or footprint view: actuator direction, edge access, pad numbering, unused throw isolation, and chassis clearance.
+- [ ] Inspect motor-driver routing for adequate trace width, thermal copper, exposed-pad grounding, and compact bypass placement.
+- [ ] Inspect the buck regulator layout against the LMR51430 datasheet recommendations before ordering.
+- [ ] Inspect USB routing and power policy: VBUS remains local to USB/protection/sense and does not power `+3V3`, `VBAT_SW`, or motors.
+- [ ] Inspect encoder connector routes against the physical encoder boards: VCC from `VBAT_SW`, A/B pulled to `+3V3`, ground continuity, left/right orientation.
+- [ ] Review final BOM/CPL upload preview in JLCPCB: rotations, side, footprints, part numbers, Basic/Extended classification, and hand-solder/DNP items.
+- [ ] Print or overlay the PCB at 1:1 scale against the Romi chassis before ordering.
 
 ## Final KiCad Release Checks
 

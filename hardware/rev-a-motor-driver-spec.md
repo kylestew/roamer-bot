@@ -150,10 +150,10 @@ Verify / decide:
 - [ ] `+VSW` TVS not needed if bulk cap + body diodes suffice; confirm on bench.
 - [ ] Reverse-polarity protection can be omitted for the Romi battery-contact path if the physical battery/contact layout prevents reversed input. Reconsider if adding external battery or bench connectors.
 
-Encoder power (schematic is correct as drawn, keep it): Romi Encoder Pair Kit (#3542) VCC = 3.5-18V, so `+3V3` is below the minimum — encoder VCC must be >=3.5V. Outputs A/B are open-drain; pulling them to `+3V3` (R3-R6, 10k) caps swing at 3.3V, STM32-safe. VCC=+5V / pull-up=+3V3 split is the right interface, no level shifter needed.
+Encoder power decision: Romi Encoder Pair Kit (#3542) VCC = 3.5-18V, so `+3V3` is below the minimum. Rev A powers encoder VCC from the switched battery rail (`VBAT_SW` / `+VSW`) instead of adding a separate `+5V` encoder rail. Outputs A/B are open-drain; pulling them to `+3V3` caps the signal swing at 3.3V, STM32-safe. No level shifter is needed.
 
-- [ ] Provide a clean >=3.5V rail for encoder VCC (5V typical). `+5V` referenced but generated nowhere yet (no MCU/regulator sheet).
-- [ ] Do not feed encoder VCC from `+VSW`: dips below 3.5V under motor load (encoder brownout at stall) and dies when SW1 off.
+- [x] Feed encoder VCC from `VBAT_SW` / `+VSW` for Rev A.
+- [x] Use the battery-level ADC reading as the encoder-power validity check. Firmware should treat encoder counts as unreliable, disable motor output, or warn when `VBAT_SW` approaches the encoder 3.5V minimum plus margin.
 - 10k pull-ups to `+3V3` OK for 12 CPR edge rates. Ref: https://www.pololu.com/product/3542
 
 ## Telemetry Requirements

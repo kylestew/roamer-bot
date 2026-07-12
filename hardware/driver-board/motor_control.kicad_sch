@@ -2530,28 +2530,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 139.7 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 139.7 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "9"
 			(uuid "ab934561-a9aa-465c-87ba-ee4842a2b8c9")
 		)
@@ -2676,28 +2654,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 152.4 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 152.4 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "d252357a-09cd-4208-a4f3-04adc59dd8c0")
 		)
@@ -2770,28 +2726,6 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 195.58 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 195.58 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 195.58 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -2919,28 +2853,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 92.71 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 92.71 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "f8b270b6-abe0-43bb-a4f9-d5df9e8dd133")
 		)
@@ -3046,28 +2958,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 83.82 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 83.82 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "032116f7-fd29-42b5-9601-7bf946c0d279")
 		)
@@ -3162,28 +3052,6 @@
 			)
 		)
 		(property "JLCPCB Type" "Basic"
-			(at 63.5 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 63.5 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 63.5 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -3368,7 +3236,8 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x06")
-		(at 57.15 121.92 180)
+		(at 57.15 119.38 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3378,7 +3247,7 @@
 		(dnp no)
 		(uuid "4b8ca9cc-670d-4edc-9cd0-97e515bc9575")
 		(property "Reference" "J3"
-			(at 54.61 121.9201 0)
+			(at 54.61 119.3799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3389,7 +3258,7 @@
 			)
 		)
 		(property "Value" "CONN_MOTOR_R"
-			(at 54.61 119.3801 0)
+			(at 54.61 121.9199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3400,7 +3269,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical"
-			(at 57.15 121.92 0)
+			(at 57.15 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3411,7 +3280,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 57.15 121.92 0)
+			(at 57.15 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3422,29 +3291,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 57.15 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 57.15 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 57.15 121.92 0)
+			(at 57.15 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3639,28 +3486,6 @@
 			)
 		)
 		(property "JLCPCB Type" "Basic"
-			(at 198.12 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 198.12 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 198.12 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -4012,28 +3837,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 54.61 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 54.61 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "6d81d97f-c441-4a32-887c-5348d6b872d8")
 		)
@@ -4117,28 +3920,6 @@
 			)
 		)
 		(property "JLCPCB" "C86667"
-			(at 113.03 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 113.03 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 113.03 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -4746,28 +4527,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 160.02 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 160.02 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "fbc263ad-a9af-45b8-87c2-ba6b7b9dbfc8")
 		)
@@ -4951,28 +4710,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 207.01 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 207.01 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "702190fb-a057-4ccc-9501-712e6588af36")
 		)
@@ -5136,28 +4873,6 @@
 			)
 		)
 		(property "JLCPCB" "C13585"
-			(at 189.23 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 189.23 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 189.23 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -5363,28 +5078,6 @@
 				)
 			)
 		)
-		(property "KLC_S3.3" ""
-			(at 168.91 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 168.91 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "c8f6e61d-7433-4c83-a513-90e8a0c8100e")
 		)
@@ -5557,28 +5250,6 @@
 			)
 		)
 		(property "JLCPCB Type" "Basic"
-			(at 100.33 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 100.33 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 100.33 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -6224,28 +5895,6 @@
 			)
 		)
 		(property "JLCPCB" "C13585"
-			(at 45.72 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 45.72 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
 			(at 45.72 60.96 0)
 			(hide yes)
 			(show_name no)

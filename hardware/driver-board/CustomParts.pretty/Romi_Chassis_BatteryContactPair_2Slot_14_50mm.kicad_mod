@@ -1,12 +1,12 @@
-(footprint "Romi_Chassis_BatteryContactPair_2Slot_10_44mm_FirstPass"
+(footprint "Romi_Chassis_BatteryContactPair_2Slot_14_50mm"
 	(version 20260206)
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "First-pass Romi chassis battery contact solder-slot pair. Pololu drawing callouts show 1.02mm x 4.06mm slots and 10.44mm pitch. Verify against chassis tabs before routing.")
-	(tags "Romi Pololu battery contact slot first-pass")
+	(descr "Romi chassis battery contact solder-slot pair, 1.02mm x 4.06mm plated slots on 14.50086mm pitch, derived from Pololu rom04a drill guide 0J1260")
+	(tags "Romi Pololu battery contact plated slot 14.50mm")
 	(property "Reference" "REF**"
-		(at 0 -10.4 0)
+		(at 0 -11.6 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,8 +15,8 @@
 			)
 		)
 	)
-	(property "Value" "Romi_Chassis_BatteryContactPair_2Slot_10_44mm_FirstPass"
-		(at 0 10.4 0)
+	(property "Value" "Romi_Chassis_BatteryContactPair_2Slot_14_50mm"
+		(at 0 11.6 0)
 		(layer "F.Fab")
 		(effects
 			(font
@@ -27,8 +27,8 @@
 	)
 	(attr through_hole)
 	(fp_line
-		(start -2.3 -8.9)
-		(end 2.3 -8.9)
+		(start -2.3 -10.2)
+		(end 2.3 -10.2)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -36,8 +36,8 @@
 		(layer "F.SilkS")
 	)
 	(fp_line
-		(start 2.3 -8.9)
-		(end 2.3 8.9)
+		(start 2.3 -10.2)
+		(end 2.3 10.2)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -45,8 +45,8 @@
 		(layer "F.SilkS")
 	)
 	(fp_line
-		(start 2.3 8.9)
-		(end -2.3 8.9)
+		(start 2.3 10.2)
+		(end -2.3 10.2)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -54,8 +54,8 @@
 		(layer "F.SilkS")
 	)
 	(fp_line
-		(start -2.3 8.9)
-		(end -2.3 -8.9)
+		(start -2.3 10.2)
+		(end -2.3 -10.2)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -63,7 +63,7 @@
 		(layer "F.SilkS")
 	)
 	(fp_text user "+"
-		(at -3.3 -5.22 0)
+		(at -3.3 7.25043 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -73,7 +73,7 @@
 		)
 	)
 	(fp_text user "-"
-		(at -3.3 5.22 0)
+		(at -3.3 -7.25043 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -83,8 +83,8 @@
 		)
 	)
 	(fp_line
-		(start -2.7 -9.3)
-		(end 2.7 -9.3)
+		(start -2.7 -10.4)
+		(end 2.7 -10.4)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -92,8 +92,8 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start 2.7 -9.3)
-		(end 2.7 9.3)
+		(start 2.7 -10.4)
+		(end 2.7 10.4)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -101,8 +101,8 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start 2.7 9.3)
-		(end -2.7 9.3)
+		(start 2.7 10.4)
+		(end -2.7 10.4)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -110,8 +110,8 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start -2.7 9.3)
-		(end -2.7 -9.3)
+		(start -2.7 10.4)
+		(end -2.7 -10.4)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -119,14 +119,14 @@
 		(layer "F.CrtYd")
 	)
 	(pad "1" thru_hole oval
-		(at 0 -5.22)
+		(at 0 7.25043)
 		(size 2.7 5.7)
 		(drill oval 1.02 4.06)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 	)
 	(pad "2" thru_hole oval
-		(at 0 5.22)
+		(at 0 -7.25043)
 		(size 2.7 5.7)
 		(drill oval 1.02 4.06)
 		(layers "*.Cu" "*.Mask")
