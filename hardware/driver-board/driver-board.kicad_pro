@@ -545,6 +545,20 @@
         "via_diameter": 0.7,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "name": "Ground",
+        "pcb_color": "rgb(0, 117, 255)",
+        "priority": 0,
+        "schematic_color": "rgb(0, 117, 255)",
+        "tuning_profile": ""
+      },
+      {
+        "name": "Power",
+        "pcb_color": "rgb(255, 48, 0)",
+        "priority": 1,
+        "schematic_color": "rgb(255, 48, 0)",
+        "tuning_profile": ""
       }
     ],
     "meta": {
@@ -552,7 +566,28 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Ground",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "VBAT*"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/Power/VBAT*"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/Power/BT2+"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+3V3"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -736,7 +771,7 @@
         "uuid": "3304d5f8-08d9-4046-829b-96d64a4f111d"
       }
     ],
-    "used_designators": "",
+    "used_designators": "TP4",
     "variants": []
   },
   "sheets": [

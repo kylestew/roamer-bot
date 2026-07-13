@@ -4,7 +4,7 @@ Status: active baseline
 
 Selected approach: two integrated single-motor H-bridge ICs, one driver per Romi motor.
 
-This spec defines the motor-driver block behavior for Rev A. It does not choose the exact IC yet.
+This spec defines the motor-driver block behavior for Rev A. The selected driver is the DRV8838, one per motor.
 
 ## Design Intent
 
@@ -16,7 +16,7 @@ The board should drive the two Romi brushed DC gearmotors, read encoders through
 
 Target motors:
 
-- Pololu 120:1 high-power mini plastic gearmotor with extended motor shaft.
+- Pololu #1520 120:1 high-power mini plastic gearmotor with extended motor shaft.
 - Intended motor operating range: about 3 V to 6 V.
 - Reference stall current: about 1.25 A at 4.5 V.
 
@@ -32,6 +32,7 @@ Driver rating target:
 - Per-motor driver should tolerate at least the Romi motor stall current long enough for fault handling and test mistakes.
 - Driver absolute maximum motor voltage must exceed the highest expected battery voltage with margin.
 - Battery chemistry is NiMH only (six-AA bay, ~7.2 V nominal, ~8.4 V fresh charge). Alkaline is excluded: ~9.6 V fresh pack erodes DRV8838 VM margin (11 V op / 12 V abs max) and pushes stall current to ~2.7 A vs the 1.8 A peak rating. See battery chemistry decision in [`rev-a-power-spec.md`](rev-a-power-spec.md).
+- Rev A accepts Pololu's proven raw-battery/DRV8838 arrangement with a 75% normal PWM ceiling. The complete output and validation policy is recorded in [`../firmware/DESIGN.md`](../firmware/DESIGN.md).
 
 ## Required Driver Features
 
@@ -115,8 +116,7 @@ Remaining schematic/layout work:
 - Add shared `+VSW` bulk capacitance near the motor-driver supply entry or driver cluster.
 - Apply the DRV8838 layout guide: local VM/VCC bypass, compact motor-current loops, and exposed-pad GND.
 - Assign footprints for motor-driver passives, motor/encoder connectors, bulk capacitance, and test points.
-- Verify the left/right Romi encoder connector physical orientation against the actual encoder boards before layout/order.
-- Verify motor/encoder connector pin ordering against the actual Romi motor plus encoder-board assembly before layout/order.
+- J3/J4 connector ordering has been verified against the Romi 32U4 top-side silkscreen reference. Left J4 is `GND, ENC_L_A, ENC_L_B, VBAT_SW, ML+, ML-` top-to-bottom; right J3 is `MR+, MR-, VBAT_SW, ENC_R_A, ENC_R_B, GND`. `VBAT_SW` intentionally replaces the reference board's `5V` encoder supply.
 
 Board-level motor-power section should include:
 
@@ -138,16 +138,15 @@ Must add before layout:
 - [x] Fuse / resettable PTC in battery path. Protects against PCB shorts, output faults, and bring-up wiring/probing mistakes. Selected F1: Littelfuse `MINISMDC260F/16-2`, JLCPCB `C16490`, `1812`, `16 V`, `2.6 A hold`, `5 A trip`.
 - [ ] Verify battery-contact polarity against the actual Romi chassis footprint/mechanics during layout.
 - [ ] Verify solderable battery-lug polarity against the actual Romi chassis contacts before routing copper.
-- [ ] Verify J3/J4 pin ordering against the physical motor/encoder harness/headers: motor +/-, encoder VCC, encoder A/B, and GND.
-- [ ] Verify left/right connector mirroring and orientation so encoder A/B and motor polarity are not swapped by board-side placement.
+- [x] Verify J3/J4 pin ordering and left/right mirroring against the Romi 32U4 connector silkscreen: motor +/-, encoder VCC, encoder A/B, and GND. Actual wheel-forward motor polarity and encoder count sign remain bring-up tests.
 
 Verify / decide:
 
-- [ ] SW2 current rating >=3A (carries both motors, buck input, and inrush). It is whole-board power, not a dedicated motor kill switch.
+- [x] SW2 only controls Q2's gate and does not carry system load current. Q2 carries the motors, buck input, and inrush; SW2 needs the correct voltage, footprint, and mechanical action rather than a 3 A contact rating.
 - [ ] Confirm DRV8838 `SLEEP_N` pulldowns are present, routed close enough to be reliable, and strong enough for reset/boot default-off behavior.
 - [ ] Confirm firmware watchdog, command timeout, and startup GPIO sequencing are treated as part of the Rev A motor safety path.
-- [ ] DRV8838 stall headroom at max VMOTOR. 1.8A max vs ~1.67A stall at 6V. Confirm or pick higher-current driver with fault output.
-- [ ] `+VSW` TVS not needed if bulk cap + body diodes suffice; confirm on bench.
+- [x] Accept the DRV8838 with the six-cell NiMH pack and Pololu-style 75% normal PWM ceiling. Firmware policy and validation requirements are in [`../firmware/DESIGN.md`](../firmware/DESIGN.md).
+- [x] Rev A omits a `+VSW` TVS or other clamp and accepts uncharacterized transient margin. Characterize braking, reversal, stall-release, and power-off peaks and reconsider the clamp/power-switch arrangement for Rev B.
 - [ ] Reverse-polarity protection can be omitted for the Romi battery-contact path if the physical battery/contact layout prevents reversed input. Reconsider if adding external battery or bench connectors.
 
 Encoder power decision: Romi Encoder Pair Kit (#3542) VCC = 3.5-18V, so `+3V3` is below the minimum. Rev A powers encoder VCC from the switched battery rail (`VBAT_SW` / `+VSW`) instead of adding a separate `+5V` encoder rail. Outputs A/B are open-drain; pulling them to `+3V3` caps the signal swing at 3.3V, STM32-safe. No level shifter is needed.
@@ -211,6 +210,9 @@ Rev A motor-driver block is acceptable when:
 ## References
 
 - Electronics design spec: [`../ELECTRONICS_DESIGN_SPEC.md`](../ELECTRONICS_DESIGN_SPEC.md)
+- Firmware motor policy: [`../firmware/DESIGN.md`](../firmware/DESIGN.md)
+- Pololu #1520 motor: https://www.pololu.com/product/1520
 - Pololu Romi 32U4 Control Board User's Guide: https://www.pololu.com/docs/0J69/all
+- Pololu Romi 32U4 connector silkscreen reference: [`../docs/0J7509.1200.jpg`](../docs/0J7509.1200.jpg)
 - Pololu Romi Encoder Pair Kit: https://www.pololu.com/product/3542
 - TI DRV8838 datasheet: https://www.ti.com/lit/ds/symlink/drv8838.pdf

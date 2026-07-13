@@ -2956,102 +2956,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Mechanical:Fiducial"
-			(exclude_from_sim no)
-			(in_bom no)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "FID"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Fiducial"
-				(at 0 3.175 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Fiducial Marker"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "fiducial marker"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Fiducial*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Fiducial_0_1"
-				(circle
-					(center 0 0)
-					(radius 1.27)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Mechanical:MountingHole"
 			(pin_names
 				(offset 1.016)
@@ -4584,6 +4488,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 119.38) (xy 53.34 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "103d5f7c-dbbf-4518-a65f-d56aa78dcd64")
+	)
+	(wire
+		(pts
 			(xy 231.14 81.28) (xy 242.57 81.28)
 		)
 		(stroke
@@ -4814,6 +4728,16 @@
 	)
 	(wire
 		(pts
+			(xy 39.37 119.38) (xy 45.72 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3abbb3ae-f5bb-4a38-9e56-fe198219afab")
+	)
+	(wire
+		(pts
 			(xy 104.14 125.73) (xy 106.68 125.73)
 		)
 		(stroke
@@ -5014,6 +4938,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 68.58) (xy 60.96 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60860f32-1f45-4f7f-acca-12b9170b6042")
+	)
+	(wire
+		(pts
 			(xy 212.09 73.66) (xy 212.09 74.93)
 		)
 		(stroke
@@ -5024,6 +4958,16 @@
 	)
 	(wire
 		(pts
+			(xy 39.37 115.57) (xy 39.37 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62c524ab-921b-4f30-b305-ce8ebf89ff52")
+	)
+	(wire
+		(pts
 			(xy 215.9 127) (xy 241.3 127)
 		)
 		(stroke
@@ -5031,16 +4975,6 @@
 			(type default)
 		)
 		(uuid "670d1e9f-1391-4a7e-847f-ea11033db7f0")
-	)
-	(wire
-		(pts
-			(xy 35.56 106.68) (xy 35.56 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "67128795-44f6-4f53-bb48-1ef84e583671")
 	)
 	(wire
 		(pts
@@ -5124,16 +5058,6 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 119.38) (xy 35.56 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7c18e727-89ee-4651-b331-19c45dcd81f3")
-	)
-	(wire
-		(pts
 			(xy 250.19 81.28) (xy 261.62 81.28)
 		)
 		(stroke
@@ -5171,16 +5095,6 @@
 			(type default)
 		)
 		(uuid "82903289-d975-4934-a707-f8bb19439f7f")
-	)
-	(wire
-		(pts
-			(xy 41.91 106.68) (xy 35.56 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "86157865-f190-4789-893b-44d59f89cb13")
 	)
 	(wire
 		(pts
@@ -5251,16 +5165,6 @@
 			(type default)
 		)
 		(uuid "987a4c6c-955a-4170-ad67-c614b763f0ad")
-	)
-	(wire
-		(pts
-			(xy 60.96 106.68) (xy 49.53 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a3496461-531c-48df-a063-90f882681975")
 	)
 	(wire
 		(pts
@@ -5534,13 +5438,13 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 68.58) (xy 60.96 106.68)
+			(xy 39.37 101.6) (xy 39.37 107.95)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e1d47293-a85d-4ef5-9ce5-2d3795a422b0")
+		(uuid "e2f05e6d-f09c-4eed-924c-ed4e509a94d8")
 	)
 	(wire
 		(pts
@@ -6277,6 +6181,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 39.37 101.6 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "03627a2e-452c-4a58-991e-86233f594c85")
+		(property "Reference" "#PWR050"
+			(at 39.37 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 39.37 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 39.37 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 39.37 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "10411d60-25b9-4c32-a678-de204e8469e8")
+		)
+		(instances
+			(project "driver-board"
+				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
+					(reference "#PWR050")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 190.5 139.7 0)
 		(mirror y)
@@ -6452,82 +6435,6 @@
 			(project "driver-board"
 				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
 					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:Fiducial")
-		(at 137.16 193.04 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0c5d14b2-e896-4d34-9ac2-e4474fa147ab")
-		(property "Reference" "FID1"
-			(at 139.7 191.7699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Fiducial"
-			(at 139.7 194.3099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1mm"
-			(at 137.16 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 137.16 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Fiducial Marker"
-			(at 137.16 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "driver-board"
-				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
-					(reference "FID1")
 					(unit 1)
 				)
 			)
@@ -7255,161 +7162,6 @@
 			(project "driver-board"
 				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
 					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 35.56 121.92 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4174418b-8cef-4c68-ac14-ab97773429ff")
-		(property "Reference" "#PWR050"
-			(at 35.56 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 35.56 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 35.56 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 35.56 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 35.56 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3726024f-95fc-45e0-b676-6c9ae050c4b7")
-		)
-		(instances
-			(project "driver-board"
-				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
-					(reference "#PWR050")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:Fiducial")
-		(at 149.86 193.04 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4d81178d-d416-45ff-b1d5-a0efd11f46c8")
-		(property "Reference" "FID2"
-			(at 152.4 191.7699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Fiducial"
-			(at 152.4 194.3099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1mm"
-			(at 149.86 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 149.86 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Fiducial Marker"
-			(at 149.86 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "driver-board"
-				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
-					(reference "FID2")
 					(unit 1)
 				)
 			)
@@ -9565,8 +9317,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 45.72 106.68 0)
-		(mirror x)
+		(at 49.53 119.38 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9574,10 +9325,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "9c00b7b4-db34-4870-bb4c-9c642e7dd9ac")
 		(property "Reference" "D2"
-			(at 44.1325 99.06 0)
+			(at 51.1175 111.76 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9587,7 +9337,7 @@
 			)
 		)
 		(property "Value" "STATUS"
-			(at 44.1325 101.6 0)
+			(at 51.1175 114.3 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9597,7 +9347,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 45.72 106.68 0)
+			(at 49.53 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9608,7 +9358,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 45.72 106.68 0)
+			(at 49.53 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9619,7 +9369,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 45.72 106.68 0)
+			(at 49.53 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9630,7 +9380,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 45.72 106.68 0)
+			(at 49.53 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9641,7 +9391,7 @@
 			)
 		)
 		(property "JLCPCB" "C2297"
-			(at 45.72 106.68 0)
+			(at 49.53 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9652,7 +9402,7 @@
 			)
 		)
 		(property "JLCPCB Type" "Basic"
-			(at 45.72 106.68 0)
+			(at 49.53 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10307,84 +10057,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:Fiducial")
-		(at 162.56 193.04 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ec4a1d96-8881-47ba-9ef4-206a87a9dfac")
-		(property "Reference" "FID3"
-			(at 165.1 191.7699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Fiducial"
-			(at 165.1 194.3099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1mm"
-			(at 162.56 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 162.56 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Fiducial Marker"
-			(at 162.56 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "driver-board"
-				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
-					(reference "FID3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 35.56 115.57 0)
+		(at 39.37 111.76 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -10396,7 +10070,7 @@
 		(fields_autoplaced yes)
 		(uuid "f2c56f06-98f5-482a-b584-e4e050020f57")
 		(property "Reference" "R21"
-			(at 33.02 114.2999 0)
+			(at 36.83 110.4899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10407,7 +10081,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 33.02 116.8399 0)
+			(at 36.83 113.0299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10418,7 +10092,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 37.338 115.57 90)
+			(at 41.148 111.76 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10429,7 +10103,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 115.57 0)
+			(at 39.37 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10440,7 +10114,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 35.56 115.57 0)
+			(at 39.37 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10451,7 +10125,7 @@
 			)
 		)
 		(property "JLCPCB" "C21190"
-			(at 35.56 115.57 0)
+			(at 39.37 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10462,7 +10136,7 @@
 			)
 		)
 		(property "JLCPCB Type" "Basic"
-			(at 35.56 115.57 0)
+			(at 39.37 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

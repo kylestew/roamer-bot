@@ -1555,6 +1555,129 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "PCM_4ms_Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "PCM_4ms_Power-symbol:PWR_FLAG"
 			(power global)
 			(pin_numbers
@@ -4203,6 +4326,16 @@
 		)
 		(uuid "d872c626-b3a7-4d34-98d7-c4ae6b8e977d")
 	)
+	(label "VBAT_FUSED"
+		(at 67.31 35.56 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e2506af3-5d89-4e79-9a2e-3c821be2c2a3")
+	)
 	(global_label "BATLEV"
 		(shape input)
 		(at 248.92 55.88 180)
@@ -4538,6 +4671,85 @@
 			(project "driver-board"
 				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d/d2d3ca0b-722e-42a4-98a9-bfa302c4313a"
 					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_4ms_Connector:TestPoint")
+		(at 116.84 35.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0ddf4c48-1581-44bb-800a-005e4bcec957")
+		(property "Reference" "TP4"
+			(at 119.38 30.9879 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TP_BAT_SW"
+			(at 119.38 33.5279 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
+			(at 121.92 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 116.84 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dff2de42-a665-4ee4-9e9c-08a24e9957fd")
+		)
+		(instances
+			(project "driver-board"
+				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d/d2d3ca0b-722e-42a4-98a9-bfa302c4313a"
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -5030,7 +5242,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Sunlord_SWPA6045S"
+		(property "Footprint" "Inductor_SMD:L_APV_ANR8065"
 			(at 147.32 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -5052,7 +5264,7 @@
 				)
 			)
 		)
-		(property "Description" "5.6uH, Isat >= 4.5-5A, Irms >= 3A"
+		(property "Description" "SWPA8065S5R6MT, 5.6uH ±20%, Isat 8.0A min, Irms 4.5A min, DCR 26mΩ max"
 			(at 147.32 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -5063,7 +5275,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C96960"
+		(property "JLCPCB" "C96977"
 			(at 147.32 115.57 90)
 			(hide yes)
 			(show_name no)
@@ -7562,7 +7774,7 @@
 				)
 			)
 		)
-		(property "Value" "TV_BAT"
+		(property "Value" "TP_BAT"
 			(at 34.798 33.02 90)
 			(show_name no)
 			(do_not_autoplace no)
