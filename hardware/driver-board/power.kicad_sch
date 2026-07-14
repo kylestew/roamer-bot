@@ -6519,7 +6519,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1u"
+		(property "Value" "100n"
 			(at 97.79 123.1899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6530,7 +6530,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 94.9452 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -6563,7 +6563,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C14663"
+		(property "JLCPCB" "C307331"
 			(at 93.98 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -6805,7 +6805,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 82.2452 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -6838,7 +6838,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C13585"
+		(property "JLCPCB" "C15850"
 			(at 81.28 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -7671,7 +7671,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1u"
+		(property "Value" "100n"
 			(at 142.24 104.1399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7682,7 +7682,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 139.3952 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -7715,7 +7715,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C14663"
+		(property "JLCPCB" "C307331"
 			(at 138.43 102.87 0)
 			(hide yes)
 			(show_name no)
