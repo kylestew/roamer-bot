@@ -6370,7 +6370,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 246.38 83.058 90)
 			(hide yes)
 			(show_name no)
@@ -6403,7 +6403,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C23345"
+		(property "JLCPCB" "C25092"
 			(at 246.38 81.28 90)
 			(hide yes)
 			(show_name no)
@@ -6474,7 +6474,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 150.622 74.93 90)
 			(hide yes)
 			(show_name no)
@@ -6507,7 +6507,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C22843"
+		(property "JLCPCB" ""
 			(at 152.4 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -6939,7 +6939,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 246.38 85.598 90)
 			(hide yes)
 			(show_name no)
@@ -6972,7 +6972,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C23345"
+		(property "JLCPCB" "C25092"
 			(at 246.38 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -7202,7 +7202,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 202.438 130.81 90)
 			(hide yes)
 			(show_name no)
@@ -7235,7 +7235,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C23186"
+		(property "JLCPCB" "C25905"
 			(at 200.66 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -7303,7 +7303,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 59.69 57.658 90)
 			(hide yes)
 			(show_name no)
@@ -7358,7 +7358,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C25804"
+		(property "JLCPCB" "C25744"
 			(at 59.69 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -9346,7 +9346,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 49.53 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -9908,7 +9908,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 192.278 130.81 90)
 			(hide yes)
 			(show_name no)
@@ -9941,7 +9941,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C23186"
+		(property "JLCPCB" "C25905"
 			(at 190.5 130.81 0)
 			(hide yes)
 			(show_name no)

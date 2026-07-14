@@ -7,6 +7,7 @@ Rev A should replace the purchasable Pololu Romi control board for the minimum u
 ## Pre-Layout Checklist
 
 - [Rev A schematic wrap-up TODO](rev-a-schematic-wrap-up-todo.md)
+- [Rev A motor-power PCB layout checklist](rev-a-motor-power-layout-checklist.md)
 
 ## Motor Driver Design
 
