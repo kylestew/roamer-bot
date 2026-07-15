@@ -47,6 +47,7 @@ For a first-order droop estimate, use `delta V = I * delta t / C`. For example, 
 
 ## Routing And Ground Checks
 
+- [ ] Implement the four-layer policy recorded in the [Rev A power spec](rev-a-power-spec.md): uninterrupted GND on `In1.Cu`, split `VBAT_SW`/`+3V3` distribution on `In2.Cu`, and no bottom-layer signals crossing an `In2.Cu` split.
 - [ ] Route battery contacts through F1, Q1, Q2, and `VBAT_SW` to the motor-driver supply using short, wide copper or pours sized for simultaneous motor current.
 - [ ] Give C16 a wide connection to `VBAT_SW` and a short, wide return to the motor ground path; do not connect it through a narrow branch trace.
 - [ ] Route each VM branch through its local capacitor area before reaching the driver pin so the bypass capacitor is electrically local.

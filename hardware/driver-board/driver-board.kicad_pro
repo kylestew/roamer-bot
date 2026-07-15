@@ -60,10 +60,10 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.5,
+          "min_clearance": 0.3,
           "min_island_area": 10.0,
           "min_thickness": 0.25,
-          "pad_connection": 1,
+          "pad_connection": 2,
           "remove_islands": 0,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
@@ -530,7 +530,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.25,
+        "clearance": 0.15,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -541,25 +541,33 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.3,
+        "track_width": 0.2,
         "tuning_profile": "",
-        "via_diameter": 0.7,
-        "via_drill": 0.3,
+        "via_diameter": 0.6,
+        "via_drill": 0.0,
         "wire_width": 6
       },
       {
+        "clearance": 0.2,
         "name": "Ground",
         "pcb_color": "rgb(0, 117, 255)",
         "priority": 0,
         "schematic_color": "rgb(0, 117, 255)",
-        "tuning_profile": ""
+        "track_width": 0.4,
+        "tuning_profile": "",
+        "via_diameter": 0.7,
+        "via_drill": 0.3
       },
       {
+        "clearance": 0.2,
         "name": "Power",
         "pcb_color": "rgb(255, 48, 0)",
         "priority": 1,
         "schematic_color": "rgb(255, 48, 0)",
-        "tuning_profile": ""
+        "track_width": 0.5,
+        "tuning_profile": "",
+        "via_diameter": 0.7,
+        "via_drill": 0.3
       }
     ],
     "meta": {
@@ -772,7 +780,7 @@
         "uuid": "3304d5f8-08d9-4046-829b-96d64a4f111d"
       }
     ],
-    "used_designators": "TP4",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [

@@ -179,6 +179,28 @@ Capacitance:
 - Local ceramic bypass at each motor-driver logic supply pin.
 - Local bypass at MCU and regulator pins following datasheet layout guidance.
 
+### Four-Layer Stackup And Plane Decision
+
+Rev A layout decision (2026-07-15):
+
+| Layer | Primary use |
+| --- | --- |
+| `F.Cu` | Components, signals, regulator switching loops, and short local power pours |
+| `In1.Cu` | Continuous GND plane; do not split it into motor and logic grounds |
+| `In2.Cu` | Split power distribution, with large `VBAT_SW` corridors and a separate `+3V3` region |
+| `B.Cu` | Lower-speed signals and GND fill stitched to `In1.Cu` |
+
+Implementation rules:
+
+- Give `VBAT_SW` the larger and wider `In2.Cu` regions because it carries motor current. Keep a `+3V3` region beneath the MCU and logic area.
+- Keep USB, clocks, regulator feedback, and other fast or sensitive signals on `F.Cu` over the uninterrupted `In1.Cu` ground plane where practical.
+- Do not route a `B.Cu` signal across a split or gap in `In2.Cu`, because `In2.Cu` is its nearest reference layer. Move the signal, move the split, or provide a continuous ground reference instead.
+- Keep the buck-regulator VIN loop, SW node, inductor connection, and output-capacitor loop local on `F.Cu`. The SW node must remain compact and must not become an internal-layer plane.
+- Connect local outer-layer power pours to `In2.Cu` with multiple vias after the local bypass capacitors; the inner power regions do not replace local capacitor loops.
+- Keep motor-current return paths compact with local driver capacitors and wide ground copper. Do not create separate motor and logic ground planes.
+- Keep the `VBAT_SW` region away from USB, MCU clock, regulator feedback, ADC sense, and other sensitive areas where practical.
+- If splitting `In2.Cu` creates narrow necks, fragments, or awkward signal-reference gaps, make `In2.Cu` predominantly `VBAT_SW` and distribute the lower-current `+3V3` rail using wide outer-layer traces or pours.
+
 Grounding:
 
 - Motor current should have short, wide return paths.
