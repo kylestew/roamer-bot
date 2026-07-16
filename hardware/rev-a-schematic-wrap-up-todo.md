@@ -45,6 +45,7 @@ Current ERC status: clean as of the latest KiCad CLI run, with `0 violations`.
 - [ ] Keep motor-current loops compact and away from encoder A/B, USB, SWD, crystal, reset, and BATLEV ADC routing.
 - [ ] Place DRV8838 `VM` and logic bypass capacitors tight to their IC pins; place the shared `VBAT_SW` bulk capacitor near the motor-driver supply entry/cluster.
 - [ ] Place the LMR51430 buck loop tightly: input cap, regulator, bootstrap cap, inductor, output caps, feedback divider, and ground return per datasheet layout guidance.
+- [ ] Keep L2 between the main `+3V3` feed and the `+3V3A` island; place C22/C23 immediately on the filtered side beside U1 VDDA/VSSA with no alternate copper path around L2.
 - [ ] Keep the buck switch node small and away from encoder, USB, crystal, SWD, reset, and ADC traces.
 - [ ] Route BATLEV as a reasonably quiet ADC node after the divider; no dedicated filter capacitor is required for Rev A.
 - [ ] Route encoder VCC from `VBAT_SW` with awareness that it is a noisy battery rail; keep encoder A/B traces referenced to quiet ground and pulled up to `+3V3`.
