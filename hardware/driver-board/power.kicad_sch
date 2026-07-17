@@ -4317,7 +4317,7 @@
 		(uuid "2bb9c750-38e4-4889-808f-d2c79ef7306f")
 	)
 	(label "REG_SW"
-		(at 140.97 115.57 0)
+		(at 139.7 115.57 0)
 		(effects
 			(font
 				(size 1.27 1.27)

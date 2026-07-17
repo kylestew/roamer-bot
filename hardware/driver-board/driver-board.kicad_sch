@@ -4299,12 +4299,6 @@
 		(uuid "9bf2e7c3-9331-4da8-a75a-ac1494981c56")
 	)
 	(junction
-		(at 109.22 45.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9fd89f57-0a58-4ffa-bcdf-27190d091d36")
-	)
-	(junction
 		(at 165.1 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4387,12 +4381,20 @@
 		(uuid "40cdfca7-63c9-4028-9517-91fd9ddae442")
 	)
 	(no_connect
+		(at 86.36 102.87)
+		(uuid "42a9d3de-469c-4a04-82b4-1e35d9c12984")
+	)
+	(no_connect
 		(at 121.92 67.31)
 		(uuid "4f55edab-65b5-48a6-a691-633f938a5b35")
 	)
 	(no_connect
 		(at 86.36 82.55)
 		(uuid "54bd9771-a744-42ba-a67d-89fa07de3f39")
+	)
+	(no_connect
+		(at 86.36 100.33)
+		(uuid "6c5287e0-4b63-45eb-a9a7-3e22a76a94d4")
 	)
 	(no_connect
 		(at 86.36 113.03)
@@ -4431,20 +4433,12 @@
 		(uuid "cb7b33f4-8678-4991-b292-047febb5a3a1")
 	)
 	(no_connect
-		(at 86.36 100.33)
-		(uuid "d948f3d0-515d-412c-a7d1-2c38b8d02f29")
-	)
-	(no_connect
 		(at 86.36 95.25)
 		(uuid "e74cac31-c7be-4cf5-8f4b-bb929227850a")
 	)
 	(no_connect
 		(at 245.11 142.24)
 		(uuid "ea075360-d6a1-4b66-a46f-c79620563499")
-	)
-	(no_connect
-		(at 86.36 102.87)
-		(uuid "ede359a8-029c-4d97-bae8-ecbf6a40a310")
 	)
 	(no_connect
 		(at 121.92 85.09)
@@ -5874,7 +5868,7 @@
 		)
 		(uuid "ecfeb219-7de1-4b44-91f6-fc733b57dc7e")
 	)
-	(global_label "DRV_R_PH"
+	(global_label "DRV_L_SLEEP_N"
 		(shape input)
 		(at 86.36 123.19 180)
 		(fields_autoplaced yes)
@@ -6018,7 +6012,7 @@
 			)
 		)
 	)
-	(global_label "DRV_L_SLEEP_N"
+	(global_label "DRV_R_PH"
 		(shape input)
 		(at 86.36 125.73 180)
 		(fields_autoplaced yes)
@@ -9649,85 +9643,6 @@
 			(project "driver-board"
 				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
 					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_4ms_Power-symbol:PWR_FLAG")
-		(at 109.22 45.72 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b2509a4c-5351-43d5-b1be-bddaa3a78e69")
-		(property "Reference" "#FLG07"
-			(at 109.22 47.625 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 109.22 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 109.22 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 109.22 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 109.22 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "199de727-d4dc-4f28-b907-907c68a91968")
-		)
-		(instances
-			(project "driver-board"
-				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
-					(reference "#FLG07")
 					(unit 1)
 				)
 			)
