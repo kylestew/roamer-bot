@@ -4,6 +4,10 @@ Active Rev A PCB and mechanical-constraint work for the custom Romi motor-contro
 
 Rev A should replace the purchasable Pololu Romi control board for the minimum useful rover loop: motor control, encoder input, telemetry, host communication, battery awareness, and safe stop.
 
+## Future Revision Planning
+
+- [Rev B upgrade plan](rev-b-upgrade-plan.md)
+
 ## Pre-Layout Checklist
 
 - [Rev A schematic wrap-up TODO](rev-a-schematic-wrap-up-todo.md)

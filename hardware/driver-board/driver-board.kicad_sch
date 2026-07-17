@@ -5870,7 +5870,7 @@
 	)
 	(global_label "DRV_L_SLEEP_N"
 		(shape input)
-		(at 86.36 123.19 180)
+		(at 86.36 120.65 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5880,7 +5880,7 @@
 		)
 		(uuid "2a42e561-6244-4e8a-a206-5a3ba5d09fa0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 73.9405 123.19 0)
+			(at 73.9405 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6038,7 +6038,7 @@
 	)
 	(global_label "DRV_L_PH"
 		(shape input)
-		(at 86.36 120.65 180)
+		(at 86.36 123.19 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6048,7 +6048,7 @@
 		)
 		(uuid "b3d88eae-93aa-49da-a179-fe2b7b4e6c19")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 74.1824 120.65 0)
+			(at 74.1824 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6062,7 +6062,7 @@
 	)
 	(global_label "ENC_L_A"
 		(shape input)
-		(at 121.92 62.23 0)
+		(at 121.92 64.77 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6072,7 +6072,7 @@
 		)
 		(uuid "b929455a-19ac-4573-a040-9f19cb664176")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 132.7066 62.23 0)
+			(at 132.7066 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6086,7 +6086,7 @@
 	)
 	(global_label "ENC_L_B"
 		(shape input)
-		(at 121.92 64.77 0)
+		(at 121.92 62.23 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6096,7 +6096,7 @@
 		)
 		(uuid "f40cbfbe-3b00-4f7a-8e38-83dc2270d12a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 132.888 64.77 0)
+			(at 132.888 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

@@ -29,6 +29,7 @@ The project is moving from the original Romi 32U4 + Raspberry Pi + ROS approach 
 
 - [Electronics design spec](ELECTRONICS_DESIGN_SPEC.md)
 - [Studio Mission Rover roadmap](STUDIO_MISSION_ROVER_ROADMAP.md)
+- [TO BUY list](TO_BUY.md)
 - [Legacy Romi references](docs/legacy-romi-references.md)
 
 # First Milestone
