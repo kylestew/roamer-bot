@@ -63,8 +63,10 @@ switches to 48 MHz. A rapid blink indicates that firmware remained on the
 | USB D-/D+ | PA11 / PA12 | USB FS |
 | SWDIO/SWCLK | PA13 / PA14 | Debug; SWO is not connected |
 
+The CubeMX design artifact also assigns I2C2 SCL/SDA to PB10/PB11, but those two MCU pads are explicit no-connects in the Rev A schematic and PCB. There are no I2C pullups or external connection, so I2C2 is not physically usable on the current board. Route it before fabrication or remove the assignment and explicitly descope the Rev A expansion bus.
+
 Initial firmware should support independent left/right motor commands, encoder counting, basic telemetry, battery reporting, and command-timeout safe stop.
 
-Hardware-facing firmware requirements are tracked in [Rev A STM32 MCU requirements](../hardware/rev-a-stm32-mcu-requirements.md).
+Hardware-facing firmware requirements are tracked in the [Rev A hardware specification](../hardware/README.md#mcu-and-firmware-facing-pin-contract).
 
 Accepted behavior and safety policies are tracked in [Rev A firmware design](DESIGN.md), including the six-cell NiMH motor-power baseline and 75% normal-duty ceiling.

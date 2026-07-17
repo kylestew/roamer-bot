@@ -60,9 +60,9 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.2,
+          "min_clearance": 0.25,
           "min_island_area": 10.0,
-          "min_thickness": 0.2,
+          "min_thickness": 0.25,
           "pad_connection": 2,
           "remove_islands": 0,
           "thermal_relief_gap": 0.5,
@@ -81,7 +81,40 @@
           "width": 0.261112
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "lib_footprint_mismatch|136459160|90475000|7a31ec5e-fd88-4cca-8ebb-b3cce0f3fdad|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|63540840|90475000|bdd644eb-cbf9-4a07-84cb-4db04f33a1ef|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|76310000|124300000|b0f12d14-7341-45f5-9424-5459ac5430af|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|77650000|119150000|e571f6b4-753d-467d-9592-d9e20a9c094f|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "silk_edge_clearance|105060000|141910000|42ea9d5c-8ea1-441b-8781-b2eecf79f2df|e759315e-a529-4b48-8064-84223e822065",
+          ""
+        ],
+        [
+          "silk_edge_clearance|66300000|141910000|42ea9d5c-8ea1-441b-8781-b2eecf79f2df|4db5782f-26c3-4dd9-af84-2bdfe2ea5dec",
+          ""
+        ],
+        [
+          "silk_edge_clearance|67600000|141910000|42ea9d5c-8ea1-441b-8781-b2eecf79f2df|514ea21e-fd68-48ec-ac6b-8221db1b125a",
+          ""
+        ],
+        [
+          "silk_edge_clearance|95900000|141910000|42ea9d5c-8ea1-441b-8781-b2eecf79f2df|a827dab7-f63a-4081-a525-686204844e42",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -151,22 +184,22 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.2,
-        "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.25,
+        "min_clearance": 0.152,
+        "min_connection": 0.152,
+        "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
-        "min_hole_clearance": 0.3,
-        "min_hole_to_hole": 0.5,
+        "min_hole_clearance": 0.254,
+        "min_hole_to_hole": 0.254,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
-        "min_text_thickness": 0.08,
+        "min_text_thickness": 0.1,
         "min_through_hole_diameter": 0.25,
-        "min_track_width": 0.2,
-        "min_via_annular_width": 0.13,
-        "min_via_diameter": 0.4,
+        "min_track_width": 0.152,
+        "min_via_annular_width": 0.15,
+        "min_via_diameter": 0.55,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },

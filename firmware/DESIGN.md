@@ -2,7 +2,7 @@
 
 Status: active decisions
 
-This document records firmware behavior that is required by the Rev A hardware. Hardware-level requirements remain in [`../hardware/rev-a-stm32-mcu-requirements.md`](../hardware/rev-a-stm32-mcu-requirements.md).
+This document records firmware behavior that is required by the Rev A hardware. Hardware-level requirements remain in the [Rev A hardware specification](../hardware/README.md).
 
 ## Motor and battery baseline
 

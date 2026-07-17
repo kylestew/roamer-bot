@@ -6456,7 +6456,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C25867"
 			(at 152.4 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -9684,7 +9684,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C15195"
 			(at 153.67 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -10421,7 +10421,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C15849"
 			(at 165.1 50.8 0)
 			(hide yes)
 			(show_name no)
