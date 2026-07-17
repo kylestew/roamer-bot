@@ -1529,184 +1529,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:L"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "L"
-				(at -1.27 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "L"
-				(at 1.905 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Inductor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "inductor choke coil reactor magnetic"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "L_0_1"
-				(arc
-					(start 0 2.54)
-					(mid 0.6323 1.905)
-					(end 0 1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 1.27)
-					(mid 0.6323 0.635)
-					(end 0 0)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 0)
-					(mid 0.6323 -0.635)
-					(end 0 -1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -1.27)
-					(mid 0.6323 -1.905)
-					(end 0 -2.54)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "L_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:LED"
 			(pin_numbers
 				(hide yes)
@@ -4704,7 +4526,7 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 81.28) (xy 242.57 81.28)
+			(xy 231.14 81.28) (xy 254 81.28)
 		)
 		(stroke
 			(width 0)
@@ -4804,7 +4626,7 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 83.82) (xy 242.57 83.82)
+			(xy 231.14 83.82) (xy 254 83.82)
 		)
 		(stroke
 			(width 0)
@@ -5144,7 +4966,7 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 81.28) (xy 220.98 81.28)
+			(xy 204.47 83.82) (xy 220.98 83.82)
 		)
 		(stroke
 			(width 0)
@@ -5181,16 +5003,6 @@
 			(type default)
 		)
 		(uuid "62c524ab-921b-4f30-b305-ce8ebf89ff52")
-	)
-	(wire
-		(pts
-			(xy 179.07 45.72) (xy 182.88 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "64dedbc4-3d05-4539-be10-f922eb7a9874")
 	)
 	(wire
 		(pts
@@ -5281,16 +5093,6 @@
 			(type default)
 		)
 		(uuid "7b9e047d-96a1-4be2-b0fa-396e76774c6e")
-	)
-	(wire
-		(pts
-			(xy 250.19 81.28) (xy 261.62 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7e42d58b-c6ca-46fe-a56c-c7ef22d91436")
 	)
 	(wire
 		(pts
@@ -5434,7 +5236,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 45.72) (xy 171.45 45.72)
+			(xy 165.1 45.72) (xy 182.88 45.72)
 		)
 		(stroke
 			(width 0)
@@ -5654,16 +5456,6 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 83.82) (xy 261.62 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7a4d2c8-a3a9-4e61-8144-983083ee35e7")
-	)
-	(wire
-		(pts
 			(xy 101.6 163.83) (xy 130.81 163.83)
 		)
 		(stroke
@@ -5694,7 +5486,7 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 83.82) (xy 220.98 83.82)
+			(xy 204.47 81.28) (xy 220.98 81.28)
 		)
 		(stroke
 			(width 0)
@@ -5893,7 +5685,7 @@
 		(uuid "ffe09232-50b3-4994-b04f-d943795bb421")
 	)
 	(label "USB_CONN_D-"
-		(at 204.47 83.82 0)
+		(at 204.47 81.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5903,7 +5695,7 @@
 		(uuid "07562938-ef41-411d-82bc-fa6a6f94a82a")
 	)
 	(label "USB_D+"
-		(at 261.62 81.28 180)
+		(at 254 83.82 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5943,7 +5735,7 @@
 		(uuid "4b2afdf9-d785-4ad8-a468-93d7c1ab6286")
 	)
 	(label "USB_D-"
-		(at 261.62 83.82 180)
+		(at 254 81.28 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5953,7 +5745,7 @@
 		(uuid "4fe89314-3179-4717-bbf4-432322e86fdb")
 	)
 	(label "USB_CONN_D+"
-		(at 204.47 81.28 0)
+		(at 204.47 83.82 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6637,107 +6429,6 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 246.38 81.28 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "08e3066e-390d-4232-aec8-d69559849212")
-		(property "Reference" "R8"
-			(at 244.602 79.248 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22"
-			(at 248.158 79.248 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 246.38 83.058 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 246.38 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 246.38 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB" "C25092"
-			(at 246.38 81.28 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Type" "Basic"
-			(at 246.38 81.28 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3128c05f-7692-4149-b67d-5b1329ec52d6")
-		)
-		(pin "2"
-			(uuid "306c81be-6d6f-445c-a669-0eea4202ea05")
-		)
-		(instances
-			(project "driver-board"
-				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
-					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
 		(at 152.4 86.36 0)
 		(unit 1)
 		(body_style 1)
@@ -6835,97 +6526,6 @@
 			(project "driver-board"
 				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
 					(reference "R5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:L")
-		(at 175.26 45.72 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "106babe0-fec2-461b-80c5-5315f770a746")
-		(property "Reference" "L2"
-			(at 175.26 40.64 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "39n"
-			(at 175.26 43.18 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Inductor_SMD:L_0402_1005Metric"
-			(at 175.26 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 175.26 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "STM32F103 VDDA series filter inductor: 39 nH, 0402; place between +3V3 and +3V3A immediately beside C22/C23 and U1 pin 9"
-			(at 175.26 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB" ""
-			(at 175.26 45.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "9a90c7e1-5d81-4135-a6dd-f253503dfcd7")
-		)
-		(pin "1"
-			(uuid "739aa8b6-6cc6-4356-9c6e-a4dcbf8e9597")
-		)
-		(instances
-			(project "driver-board"
-				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
-					(reference "L2")
 					(unit 1)
 				)
 			)
@@ -7290,107 +6890,6 @@
 			(project "driver-board"
 				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
 					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 246.38 83.82 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "28c767bf-d6c6-4161-979c-36405b2f09ff")
-		(property "Reference" "R9"
-			(at 244.602 86.106 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22"
-			(at 248.412 86.106 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 246.38 85.598 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 246.38 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 246.38 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB" "C25092"
-			(at 246.38 83.82 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Type" "Basic"
-			(at 246.38 83.82 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "edf61be1-de25-4086-9837-4943aad267a2")
-		)
-		(pin "2"
-			(uuid "04414a14-c6c3-40f7-a415-c0fd41d8d8d3")
-		)
-		(instances
-			(project "driver-board"
-				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
-					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -7887,6 +7386,109 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 217.17 73.66 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5ff6e408-5403-4e06-93e9-e2c1801797df")
+		(property "Reference" "C9"
+			(at 217.17 66.04 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100n"
+			(at 217.17 68.58 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 213.36 72.6948 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 217.17 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 217.17 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C307331"
+			(at 217.17 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Type" "Basic"
+			(at 217.17 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "15c01467-5b55-4280-9354-cf70d4525402")
+		)
+		(pin "2"
+			(uuid "f7ceef14-8c88-4eec-b95a-2310182c14a5")
+		)
+		(instances
+			(project "driver-board"
+				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
+					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:USB_C_Receptacle_USB2.0_16P")
 		(at 260.35 129.54 0)
 		(mirror y)
@@ -7919,7 +7521,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_USB:USB_C_Receptacle_G-Switch_GT-USB-7025"
+		(property "Footprint" "Connector_USB:USB_C_Receptacle_G-Switch_GT-USB-7010ASV"
 			(at 256.54 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -7952,7 +7554,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C963213"
+		(property "JLCPCB" "C2988369"
 			(at 260.35 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -10047,108 +9649,6 @@
 			(project "driver-board"
 				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
 					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 217.17 73.66 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "abc60189-c731-462d-b9bd-e03d804d57d3")
-		(property "Reference" "C9"
-			(at 217.17 66.04 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10u"
-			(at 217.17 68.58 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 220.98 72.6948 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 217.17 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 217.17 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB" "C15850"
-			(at 217.17 73.66 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Type" "Basic"
-			(at 217.17 73.66 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "04a97e6c-a1da-4235-af42-0fae46449561")
-		)
-		(pin "2"
-			(uuid "139289d8-f62c-4fa2-a366-9afa7dca53da")
-		)
-		(instances
-			(project "driver-board"
-				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
-					(reference "C9")
 					(unit 1)
 				)
 			)

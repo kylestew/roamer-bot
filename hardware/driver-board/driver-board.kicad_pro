@@ -216,6 +216,7 @@
       ],
       "track_widths": [
         0.0,
+        0.261,
         0.29337,
         0.3,
         0.5,
@@ -530,7 +531,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.15,
+        "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -780,7 +781,7 @@
         "uuid": "3304d5f8-08d9-4046-829b-96d64a4f111d"
       }
     ],
-    "used_designators": "",
+    "used_designators": "C24",
     "variants": []
   },
   "sheets": [
