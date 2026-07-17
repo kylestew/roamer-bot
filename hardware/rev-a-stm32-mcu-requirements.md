@@ -6,7 +6,7 @@ Decision locked: Rev A will use a bare STM32-family MCU on the custom PCB.
 
 Decision locked for now: use `STM32F103CBT6`.
 
-Open verification: confirm JLCPCB availability/library support and final LQFP-48 pin assignment before PCB release.
+Open verification: confirm JLCPCB availability/library support before PCB release. The firmware-facing LQFP-48 nets have been checked against the current schematic and are recorded in [`../firmware/README.md`](../firmware/README.md#verified-rev-a-pin-contract).
 
 Purpose: define the MCU needs clearly enough that part selection becomes a constrained engineering choice instead of a habit-based guess.
 
@@ -23,7 +23,7 @@ Rev A should look like a small professional embedded motor-control product:
 - Package that can be assembled, inspected, and reworked during prototype bring-up.
 - Enough spare pins to recover from one wiring mistake or feature addition.
 
-The selected MCU is `STM32F103CBT6`, a 128 KB Flash STM32F1 part in the 48-pin LQFP package class evaluated for Rev A. The final schematic pin assignment still needs to prove that USB, SWD, two encoder timers, two PWM outputs, ADC, I2C, buttons, LEDs, and spare GPIO route cleanly.
+The selected MCU is `STM32F103CBT6`, a 128 KB Flash STM32F1 part in the 48-pin LQFP package class evaluated for Rev A. The current schematic routes USB, SWD, two encoder timers, two PWM outputs, ADC, and the heartbeat LED; I2C pins remain reserved in the MCU configuration for future use.
 
 ## Required Product Behavior
 
@@ -32,7 +32,7 @@ The MCU must support:
 - independent left/right motor command outputs
 - two PWM outputs for motor speed
 - two GPIO direction outputs
-- one shared GPIO driver sleep output for both motor drivers
+- two GPIO driver sleep outputs, one per motor driver
 - two hardware quadrature encoder interfaces using STM32 timer encoder mode
 - battery or motor-rail voltage measurement
 - native USB device command/telemetry link to a laptop or host
@@ -62,7 +62,8 @@ DRV_L_EN       left motor PWM
 DRV_R_PH       right motor direction
 DRV_R_EN       right motor PWM
 
-DRV_SLEEP_N    shared DRV8838 active-low sleep
+DRV_L_SLEEP_N  left DRV8838 active-low sleep
+DRV_R_SLEEP_N  right DRV8838 active-low sleep
 
 ENC_L_A        left encoder channel A
 ENC_L_B        left encoder channel B
@@ -82,7 +83,7 @@ The Romi encoder boards are powered from the switched battery rail (`VBAT_SW` / 
 | Right motor PWM | 1 | Timer PWM output. |
 | Left motor direction | 1 | GPIO output. |
 | Right motor direction | 1 | GPIO output. |
-| Shared driver sleep | 1 | GPIO output, default-safe during reset. |
+| Driver sleep | 2 | GPIO outputs, default-safe during reset. |
 | Left encoder A/B | 2 | Must route to `CH1`/`CH2` of one encoder-capable timer instance. |
 | Right encoder A/B | 2 | Must route to `CH1`/`CH2` of a second encoder-capable timer instance. |
 | Battery or `+VSW` sense | 1 | ADC input. |
@@ -284,7 +285,7 @@ For each candidate STM32, answer:
 1. Does it have two independent timer instances that explicitly support encoder interface mode?
 2. Can `ENC_L_A/B` and `ENC_R_A/B` each route to `CH1`/`CH2` pins on those two timer instances?
 3. Does it have two PWM outputs that route cleanly to `DRV_L_EN` and `DRV_R_EN`?
-4. Are GPIOs available for `DRV_L_PH`, `DRV_R_PH`, and shared `DRV_SLEEP_N`?
+4. Are GPIOs available for `DRV_L_PH`, `DRV_R_PH`, `DRV_L_SLEEP_N`, and `DRV_R_SLEEP_N`?
 5. Is one ADC pin available for `+VSW` or battery sense?
 6. Does it have a routable I2C bus for an optional IMU/accelerometer?
 7. Is there a spare GPIO suitable for an IMU interrupt if we populate one?
@@ -306,7 +307,8 @@ DRV_L_PH
 DRV_L_EN
 DRV_R_PH
 DRV_R_EN
-DRV_SLEEP_N
+DRV_L_SLEEP_N
+DRV_R_SLEEP_N
 
 ENC_L_A
 ENC_L_B

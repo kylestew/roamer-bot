@@ -13,10 +13,10 @@ This is the purchasing list for the Rev A milestone: tethered teleoperation, enc
 - [ ] **One individual-channel AA NiMH charger.** Recommended: Panasonic eneloop `BQ-CC63` eight-slot charger, in the UK-plug version. It charges and terminates each of 1-8 cells independently, so all six rover cells can be charged in one pass.
   - Charge the loose cells in the charger, not in the rover.
   - Product reference: <https://www.panasonic.com/global/energy/products/eneloop/en/lineup/charger-bq-cc63.html>
-- [ ] **One Pololu Romi Chassis Kit**, if the old rover chassis is not being reused. Any colour is electrically equivalent; the current project reference is white, Pololu `#3509`.
+- [x] **One Pololu Romi Chassis Kit — purchased.** Any colour is electrically equivalent; the current project reference is white, Pololu `#3509`.
   - Includes chassis, two 120:1 HP motors, motor clips, two wheels, one ball caster, and the complete battery-contact set.
   - Product reference: <https://www.pololu.com/product/3509>
-- [ ] **One Pololu Romi Encoder Pair Kit**, if the old encoders are not being reused. Pololu `#3542`.
+- [x] **One Pololu Romi Encoder Pair Kit — purchased.** Pololu `#3542`.
   - Includes two encoder boards, two magnetic discs, and the low-profile male/female headers needed by the custom PCB.
   - Product reference: <https://www.pololu.com/product/3542>
 - [ ] **#2-56 mounting hardware:** at least four 3/16-inch screws and four nuts; buying a packet of ten gives useful spares. The chassis kit does not include this hardware.
@@ -29,7 +29,11 @@ The chassis and encoder kit should be in hand before PCB release so battery-tab 
   - Turnkey recommendation: genuine `STLINK-V3SET`, which includes the STDC14-to-MIPI10 cable.
   - Do not buy an `STLINK-V3MINIE` alone for this board; it includes only an STDC14-to-STDC14 cable, so it also needs a separate STDC14-to-MIPI10 adapter cable.
   - Product reference: <https://www.st.com/en/development-tools/stlink-v3set.html>
-- [ ] **One USB-C data cable** for board telemetry. It must carry data, not be a charge-only cable. Match the host end to the development laptop.
+- [ ] **One long, flexible USB 2.0 data cable** for tethered telemetry: USB-C at the rover end and the connector required by the development laptop at the host end.
+  - Recommended starting length: 3 m. This should give useful floor-test range without excessive cable weight or drag.
+  - It must carry data, not be a charge-only cable; prefer a USB-IF-certified cable from a reputable manufacturer.
+  - USB 2.0 allows up to 5 m for a passive cable. For a longer tether, use a compliant active USB 2.0 extension/repeater rather than chaining passive extension leads.
+- [ ] **Light cable strain relief:** a reusable hook-and-loop tie or clip that transfers cable pull to the chassis instead of the PCB's USB-C socket. Leave a small service loop at the connector.
 - [ ] **Current-limited bench supply**, if not already owned or borrowable: adjustable through 0-8.5 V, CV/CC operation, output-enable button, and preferably at least 5 A available. Start bring-up with a much lower current limit and one motor at low duty.
 - [ ] **Digital multimeter**, if not already owned, with DC voltage, resistance/continuity, diode test, and at least 5 A fused DC-current capability.
 - [ ] **Two pairs of safe bench leads:** 4 mm banana leads plus insulated mini-grabbers or hook clips. Final probe/lead choice depends on the board's still-open bench-power and test-loop decision.

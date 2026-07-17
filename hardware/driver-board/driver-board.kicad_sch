@@ -5988,7 +5988,7 @@
 			)
 		)
 	)
-	(global_label "DRV_L_EN"
+	(global_label "DRV_R_PH"
 		(shape input)
 		(at 86.36 105.41 180)
 		(fields_autoplaced yes)
@@ -6012,7 +6012,7 @@
 			)
 		)
 	)
-	(global_label "DRV_R_PH"
+	(global_label "DRV_L_EN"
 		(shape input)
 		(at 86.36 125.73 180)
 		(fields_autoplaced yes)
