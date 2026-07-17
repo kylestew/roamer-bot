@@ -10,8 +10,8 @@ enum {
 
 static const uint32_t LED_PIN = 1UL << 13U;
 static const uint32_t MOTOR_OUTPUT_PINS =
-    (1UL << 6U) | (1UL << 7U) | (1UL << 12U) |
-    (1UL << 13U) | (1UL << 14U) | (1UL << 15U);
+    (1UL << 5U) | (1UL << 6U) | (1UL << 7U) |
+    (1UL << 12U) | (1UL << 13U) | (1UL << 14U);
 
 static volatile uint32_t milliseconds;
 
@@ -36,19 +36,25 @@ static void gpio_configure_push_pull_output(GPIO_TypeDef *gpio, uint32_t pin)
 
 static void safe_gpio_init(void)
 {
-    RCC->APB2ENR |= RCC_APB2ENR_IOPBEN | RCC_APB2ENR_IOPCEN;
+    RCC->APB2ENR |= RCC_APB2ENR_AFIOEN | RCC_APB2ENR_IOPBEN |
+                    RCC_APB2ENR_IOPCEN;
     (void)RCC->APB2ENR;
+
+    /* Keep SWD; map TIM2 CH1/CH2 to PA15/PB3 for ENC_R_B/ENC_R_A. */
+    AFIO->MAPR = (AFIO->MAPR & ~(AFIO_MAPR_SWJ_CFG | AFIO_MAPR_TIM2_REMAP)) |
+                 AFIO_MAPR_SWJ_CFG_JTAGDISABLE |
+                 AFIO_MAPR_TIM2_REMAP_PARTIALREMAP1;
 
     /* Establish safe output levels before changing any pin to output mode. */
     GPIOB->BSRR = MOTOR_OUTPUT_PINS << 16U;
     GPIOC->BSRR = LED_PIN; /* PC13 LED is active-low, so high is off. */
 
+    gpio_configure_push_pull_output(GPIOB, 5U);  /* DRV_R_SLEEP_N */
     gpio_configure_push_pull_output(GPIOB, 6U);  /* DRV_R_PH */
     gpio_configure_push_pull_output(GPIOB, 7U);  /* DRV_R_EN */
     gpio_configure_push_pull_output(GPIOB, 12U); /* DRV_L_SLEEP_N */
     gpio_configure_push_pull_output(GPIOB, 13U); /* DRV_L_PH */
     gpio_configure_push_pull_output(GPIOB, 14U); /* DRV_L_EN */
-    gpio_configure_push_pull_output(GPIOB, 15U); /* DRV_R_SLEEP_N */
     gpio_configure_push_pull_output(GPIOC, 13U); /* LED_HEARTBEAT */
 }
 

@@ -53,15 +53,15 @@ switches to 48 MHz. A rapid blink indicates that firmware remained on the
 | Heartbeat LED | PC13 | GPIO, active-low |
 | Left sleep | PB12 | GPIO, active-low |
 | Left direction | PB13 | GPIO |
-| Left PWM | PB14 | TIM1 CH2N, partial remap |
-| Right sleep | PB15 | GPIO, active-low |
+| Left PWM | PB14 | TIM1 CH2N |
+| Right sleep | PB5 | GPIO, active-low |
 | Right direction | PB6 | GPIO |
 | Right PWM | PB7 | TIM4 CH2 |
-| Left encoder A/B | PA1 / PA0 | TIM2 CH2 / CH1 |
-| Right encoder A/B | PA6 / PA7 | TIM3 CH1 / CH2 |
+| Left encoder A/B | PA6 / PA7 | TIM3 CH1 / CH2 |
+| Right encoder A/B | PB3 / PA15 | TIM2 CH2 / CH1, partial remap 1 |
 | Battery level | PB0 | ADC1 IN8 |
 | USB D-/D+ | PA11 / PA12 | USB FS |
-| SWDIO/SWCLK/SWO | PA13 / PA14 / PB3 | Debug |
+| SWDIO/SWCLK | PA13 / PA14 | Debug; SWO is not connected |
 
 Initial firmware should support independent left/right motor commands, encoder counting, basic telemetry, battery reporting, and command-timeout safe stop.
 

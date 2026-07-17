@@ -116,7 +116,7 @@ Remaining schematic/layout work:
 - Add shared `+VSW` bulk capacitance near the motor-driver supply entry or driver cluster.
 - Apply the DRV8838 layout guide: local VM/VCC bypass, compact motor-current loops, and exposed-pad GND.
 - Assign footprints for motor-driver passives, motor/encoder connectors, bulk capacitance, and test points.
-- J3/J4 connector ordering has been verified against the Romi 32U4 top-side silkscreen reference. Left J4 is `GND, ENC_L_A, ENC_L_B, VBAT_SW, ML+, ML-` top-to-bottom; right J3 is `MR+, MR-, VBAT_SW, ENC_R_A, ENC_R_B, GND`. `VBAT_SW` intentionally replaces the reference board's `5V` encoder supply.
+- J3/J4 intentionally use a geometrically mirrored connector layout rather than exactly matching the Romi 32U4 top-side silkscreen. Left J4 is `GND, ENC_L_A, ENC_L_B, VBAT_SW, ML+, ML-` top-to-bottom; right J3 is `MR-, MR+, VBAT_SW, ENC_R_A, ENC_R_B, GND`. The right-side `MR-`, `MR+` order is deliberate because mirroring the left driver gives cleaner, more understandable routing. Do not change it solely to match Pololu. `VBAT_SW` intentionally replaces the reference board's `5V` encoder supply.
 
 Board-level motor-power section should include:
 
@@ -138,7 +138,7 @@ Must add before layout:
 - [x] Fuse / resettable PTC in battery path. Protects against PCB shorts, output faults, and bring-up wiring/probing mistakes. Selected F1: Littelfuse `MINISMDC260F/16-2`, JLCPCB `C16490`, `1812`, `16 V`, `2.6 A hold`, `5 A trip`.
 - [ ] Verify battery-contact polarity against the actual Romi chassis footprint/mechanics during layout.
 - [ ] Verify solderable battery-lug polarity against the actual Romi chassis contacts before routing copper.
-- [x] Verify J3/J4 pin ordering and left/right mirroring against the Romi 32U4 connector silkscreen: motor +/-, encoder VCC, encoder A/B, and GND. Actual wheel-forward motor polarity and encoder count sign remain bring-up tests.
+- [x] Verify J3/J4 pin ordering and intentional left/right mirroring. The right motor pins deliberately do not match the Romi 32U4 silkscreen: J3 is `MR-, MR+, VBAT_SW, ENC_R_A, ENC_R_B, GND` top-to-bottom. Actual wheel-forward motor polarity and encoder count sign remain bring-up tests and may be corrected in firmware.
 
 Verify / decide:
 

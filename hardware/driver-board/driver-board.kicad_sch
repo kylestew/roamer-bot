@@ -4365,7 +4365,7 @@
 		(uuid "fae90750-fcc1-4b4f-acf8-a5f98ab94914")
 	)
 	(no_connect
-		(at 121.92 100.33)
+		(at 121.92 62.23)
 		(uuid "1a12a4f6-b652-49e8-bd6b-4920c58e26a7")
 	)
 	(no_connect
@@ -4381,7 +4381,7 @@
 		(uuid "40cdfca7-63c9-4028-9517-91fd9ddae442")
 	)
 	(no_connect
-		(at 86.36 102.87)
+		(at 86.36 128.27)
 		(uuid "42a9d3de-469c-4a04-82b4-1e35d9c12984")
 	)
 	(no_connect
@@ -4413,6 +4413,10 @@
 		(uuid "8ebabff9-7aa5-48ab-a3c4-a6722417b54f")
 	)
 	(no_connect
+		(at 101.6 173.99)
+		(uuid "976935aa-e576-40ff-91bb-e317a13d5a6c")
+	)
+	(no_connect
 		(at 86.36 115.57)
 		(uuid "b1b09dd2-b50f-4593-bdcb-d362fa918701")
 	)
@@ -4427,6 +4431,10 @@
 	(no_connect
 		(at 86.36 118.11)
 		(uuid "c127b095-aac3-489c-bd9f-f53c20f097fc")
+	)
+	(no_connect
+		(at 121.92 64.77)
+		(uuid "c9cd449a-3c7a-46e5-a47c-8d39c3ee3f8f")
 	)
 	(no_connect
 		(at 86.36 110.49)
@@ -4597,16 +4605,6 @@
 			(type default)
 		)
 		(uuid "268ab5c4-085d-473f-bce8-86c23201b24f")
-	)
-	(wire
-		(pts
-			(xy 67.31 97.79) (xy 86.36 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "26a9b6be-8472-49d9-84bd-8eb456408a5b")
 	)
 	(wire
 		(pts
@@ -5167,16 +5165,6 @@
 			(type default)
 		)
 		(uuid "8f5149de-8edc-4abe-895d-0d50a499665c")
-	)
-	(wire
-		(pts
-			(xy 101.6 173.99) (xy 130.81 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "913bd7d3-d0b2-4921-a624-bc012de0a91c")
 	)
 	(wire
 		(pts
@@ -5778,16 +5766,6 @@
 		)
 		(uuid "a09ea922-21e3-476e-9399-18a445945b8c")
 	)
-	(label "SWO"
-		(at 130.81 173.99 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a70b13c5-0633-4ea6-a8de-09777b01cf53")
-	)
 	(label "SWDIO"
 		(at 143.51 95.25 180)
 		(effects
@@ -5858,16 +5836,6 @@
 		)
 		(uuid "eaad32b7-d4b2-4b97-906d-48dd4e3dc1fb")
 	)
-	(label "SWO"
-		(at 67.31 97.79 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ecfeb219-7de1-4b44-91f6-fc733b57dc7e")
-	)
 	(global_label "DRV_L_SLEEP_N"
 		(shape input)
 		(at 86.36 120.65 180)
@@ -5918,7 +5886,7 @@
 	)
 	(global_label "DRV_R_SLEEP_N"
 		(shape input)
-		(at 86.36 128.27 180)
+		(at 86.36 102.87 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5928,7 +5896,7 @@
 		)
 		(uuid "61ff08bd-a9e0-4f44-8a4c-517fa2d6143d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 68.4373 128.27 0)
+			(at 68.4373 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5942,7 +5910,7 @@
 	)
 	(global_label "ENC_R_B"
 		(shape input)
-		(at 121.92 80.01 0)
+		(at 121.92 100.33 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5952,7 +5920,7 @@
 		)
 		(uuid "6bc64919-eda7-4ed8-b74f-3431c6b2cb8a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 133.1299 80.01 0)
+			(at 133.1299 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6062,7 +6030,7 @@
 	)
 	(global_label "ENC_L_A"
 		(shape input)
-		(at 121.92 64.77 0)
+		(at 121.92 77.47 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6072,7 +6040,7 @@
 		)
 		(uuid "b929455a-19ac-4573-a040-9f19cb664176")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 132.7066 64.77 0)
+			(at 132.7066 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6086,7 +6054,7 @@
 	)
 	(global_label "ENC_L_B"
 		(shape input)
-		(at 121.92 62.23 0)
+		(at 121.92 80.01 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6096,7 +6064,7 @@
 		)
 		(uuid "f40cbfbe-3b00-4f7a-8e38-83dc2270d12a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 132.888 62.23 0)
+			(at 132.888 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6110,17 +6078,17 @@
 	)
 	(global_label "ENC_R_A"
 		(shape input)
-		(at 121.92 77.47 0)
+		(at 86.36 97.79 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "f4be8291-5f4c-470c-b947-fb475d7648a2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 132.9485 77.47 0)
+			(at 75.3315 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6128,7 +6096,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
