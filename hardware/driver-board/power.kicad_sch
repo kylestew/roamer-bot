@@ -4317,7 +4317,7 @@
 		(uuid "2bb9c750-38e4-4889-808f-d2c79ef7306f")
 	)
 	(label "REG_SW"
-		(at 140.97 115.57 0)
+		(at 139.7 115.57 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4832,7 +4832,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C25741"
 			(at 157.48 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -5493,7 +5493,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C25779"
 			(at 256.54 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -6372,7 +6372,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C43473"
 			(at 157.48 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -7621,7 +7621,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C25741"
 			(at 256.54 48.26 0)
 			(hide yes)
 			(show_name no)

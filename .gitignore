@@ -1,5 +1,8 @@
 .DS_Store
 
+# Firmware build output
+firmware/build*/
+
 # KiCad editor/runtime files
 *.lck
 .history/

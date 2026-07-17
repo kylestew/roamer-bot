@@ -4287,12 +4287,6 @@
 		(uuid "83511d03-d7ab-4643-9752-2a2adec49340")
 	)
 	(junction
-		(at 165.1 41.91)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "88f4f24f-b574-4d74-a844-02f3c71bb730")
-	)
-	(junction
 		(at 241.3 127)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4303,6 +4297,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9bf2e7c3-9331-4da8-a75a-ac1494981c56")
+	)
+	(junction
+		(at 165.1 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a3474c01-1ce6-4e86-9a7c-773bdd065096")
 	)
 	(junction
 		(at 173.99 33.02)
@@ -4335,7 +4335,7 @@
 		(uuid "ccb3f907-a2bb-4a0a-8bf5-793a0cb02ed7")
 	)
 	(junction
-		(at 153.67 41.91)
+		(at 153.67 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d02d3073-92ff-42aa-b134-4740642f897f")
@@ -4353,7 +4353,7 @@
 		(uuid "e93dc37e-332f-4fbe-87f3-a9a512963905")
 	)
 	(junction
-		(at 165.1 52.07)
+		(at 165.1 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "eb9a856d-d7a8-4d4c-9468-baedb6933161")
@@ -4365,7 +4365,7 @@
 		(uuid "fae90750-fcc1-4b4f-acf8-a5f98ab94914")
 	)
 	(no_connect
-		(at 121.92 100.33)
+		(at 121.92 62.23)
 		(uuid "1a12a4f6-b652-49e8-bd6b-4920c58e26a7")
 	)
 	(no_connect
@@ -4379,6 +4379,10 @@
 	(no_connect
 		(at 121.92 72.39)
 		(uuid "40cdfca7-63c9-4028-9517-91fd9ddae442")
+	)
+	(no_connect
+		(at 86.36 128.27)
+		(uuid "42a9d3de-469c-4a04-82b4-1e35d9c12984")
 	)
 	(no_connect
 		(at 121.92 67.31)
@@ -4405,6 +4409,14 @@
 		(uuid "8ebabff9-7aa5-48ab-a3c4-a6722417b54f")
 	)
 	(no_connect
+		(at 101.6 173.99)
+		(uuid "976935aa-e576-40ff-91bb-e317a13d5a6c")
+	)
+	(no_connect
+		(at 86.36 80.01)
+		(uuid "a969c5e6-56ae-493e-ba3e-62397aa1bcd1")
+	)
+	(no_connect
 		(at 86.36 115.57)
 		(uuid "b1b09dd2-b50f-4593-bdcb-d362fa918701")
 	)
@@ -4421,12 +4433,12 @@
 		(uuid "c127b095-aac3-489c-bd9f-f53c20f097fc")
 	)
 	(no_connect
-		(at 86.36 110.49)
-		(uuid "cb7b33f4-8678-4991-b292-047febb5a3a1")
+		(at 121.92 64.77)
+		(uuid "c9cd449a-3c7a-46e5-a47c-8d39c3ee3f8f")
 	)
 	(no_connect
-		(at 86.36 100.33)
-		(uuid "d948f3d0-515d-412c-a7d1-2c38b8d02f29")
+		(at 86.36 110.49)
+		(uuid "cb7b33f4-8678-4991-b292-047febb5a3a1")
 	)
 	(no_connect
 		(at 86.36 95.25)
@@ -4435,10 +4447,6 @@
 	(no_connect
 		(at 245.11 142.24)
 		(uuid "ea075360-d6a1-4b66-a46f-c79620563499")
-	)
-	(no_connect
-		(at 86.36 102.87)
-		(uuid "ede359a8-029c-4d97-bae8-ecbf6a40a310")
 	)
 	(no_connect
 		(at 121.92 85.09)
@@ -4490,7 +4498,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 50.8) (xy 165.1 52.07)
+			(xy 165.1 54.61) (xy 165.1 55.88)
 		)
 		(stroke
 			(width 0)
@@ -4520,7 +4528,7 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 81.28) (xy 242.57 81.28)
+			(xy 231.14 81.28) (xy 254 81.28)
 		)
 		(stroke
 			(width 0)
@@ -4560,7 +4568,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 41.91) (xy 165.1 43.18)
+			(xy 165.1 45.72) (xy 165.1 46.99)
 		)
 		(stroke
 			(width 0)
@@ -4600,16 +4608,6 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 97.79) (xy 86.36 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "26a9b6be-8472-49d9-84bd-8eb456408a5b")
-	)
-	(wire
-		(pts
 			(xy 162.56 33.02) (xy 173.99 33.02)
 		)
 		(stroke
@@ -4620,7 +4618,7 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 83.82) (xy 242.57 83.82)
+			(xy 231.14 83.82) (xy 254 83.82)
 		)
 		(stroke
 			(width 0)
@@ -4850,7 +4848,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 43.18) (xy 153.67 41.91)
+			(xy 153.67 46.99) (xy 153.67 45.72)
 		)
 		(stroke
 			(width 0)
@@ -4897,16 +4895,6 @@
 			(type default)
 		)
 		(uuid "51ce8fae-6b8e-47d6-a186-8729c76e7a23")
-	)
-	(wire
-		(pts
-			(xy 86.36 80.01) (xy 60.96 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "51fe2061-7617-4daa-b05b-d870b7643924")
 	)
 	(wire
 		(pts
@@ -4960,7 +4948,7 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 81.28) (xy 220.98 81.28)
+			(xy 204.47 83.82) (xy 220.98 83.82)
 		)
 		(stroke
 			(width 0)
@@ -4970,13 +4958,13 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 80.01) (xy 60.96 130.81)
+			(xy 60.96 100.33) (xy 60.96 130.81)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "60860f32-1f45-4f7f-acca-12b9170b6042")
+		(uuid "6104d916-28f9-47c5-b60b-3d14b6825849")
 	)
 	(wire
 		(pts
@@ -5030,7 +5018,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 41.91) (xy 165.1 41.91)
+			(xy 153.67 45.72) (xy 165.1 45.72)
 		)
 		(stroke
 			(width 0)
@@ -5047,6 +5035,16 @@
 			(type default)
 		)
 		(uuid "6b33cf28-fa6b-47ca-b91d-f2d3bdb4e5aa")
+	)
+	(wire
+		(pts
+			(xy 60.96 100.33) (xy 86.36 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c706195-f08b-4090-b55d-68dc3072731b")
 	)
 	(wire
 		(pts
@@ -5090,17 +5088,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 81.28) (xy 261.62 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7e42d58b-c6ca-46fe-a56c-c7ef22d91436")
-	)
-	(wire
-		(pts
-			(xy 165.1 40.64) (xy 165.1 41.91)
+			(xy 182.88 44.45) (xy 182.88 45.72)
 		)
 		(stroke
 			(width 0)
@@ -5160,7 +5148,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 54.61) (xy 109.22 41.91)
+			(xy 109.22 54.61) (xy 109.22 45.72)
 		)
 		(stroke
 			(width 0)
@@ -5177,16 +5165,6 @@
 			(type default)
 		)
 		(uuid "8f5149de-8edc-4abe-895d-0d50a499665c")
-	)
-	(wire
-		(pts
-			(xy 101.6 173.99) (xy 130.81 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "913bd7d3-d0b2-4921-a624-bc012de0a91c")
 	)
 	(wire
 		(pts
@@ -5230,7 +5208,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 52.07) (xy 165.1 52.07)
+			(xy 153.67 55.88) (xy 165.1 55.88)
 		)
 		(stroke
 			(width 0)
@@ -5240,7 +5218,17 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 50.8) (xy 153.67 52.07)
+			(xy 165.1 45.72) (xy 182.88 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a89c0d2b-5256-4fb9-a51b-cc99aa88973e")
+	)
+	(wire
+		(pts
+			(xy 153.67 54.61) (xy 153.67 55.88)
 		)
 		(stroke
 			(width 0)
@@ -5260,7 +5248,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 52.07) (xy 165.1 53.34)
+			(xy 165.1 55.88) (xy 165.1 57.15)
 		)
 		(stroke
 			(width 0)
@@ -5450,16 +5438,6 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 83.82) (xy 261.62 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7a4d2c8-a3a9-4e61-8144-983083ee35e7")
-	)
-	(wire
-		(pts
 			(xy 101.6 163.83) (xy 130.81 163.83)
 		)
 		(stroke
@@ -5490,7 +5468,7 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 83.82) (xy 220.98 83.82)
+			(xy 204.47 81.28) (xy 220.98 81.28)
 		)
 		(stroke
 			(width 0)
@@ -5560,7 +5538,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 41.91) (xy 153.67 41.91)
+			(xy 109.22 45.72) (xy 153.67 45.72)
 		)
 		(stroke
 			(width 0)
@@ -5689,7 +5667,7 @@
 		(uuid "ffe09232-50b3-4994-b04f-d943795bb421")
 	)
 	(label "USB_CONN_D-"
-		(at 204.47 83.82 0)
+		(at 204.47 81.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5699,7 +5677,7 @@
 		(uuid "07562938-ef41-411d-82bc-fa6a6f94a82a")
 	)
 	(label "USB_D+"
-		(at 261.62 81.28 180)
+		(at 254 83.82 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5739,7 +5717,7 @@
 		(uuid "4b2afdf9-d785-4ad8-a468-93d7c1ab6286")
 	)
 	(label "USB_D-"
-		(at 261.62 83.82 180)
+		(at 254 81.28 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5749,7 +5727,7 @@
 		(uuid "4fe89314-3179-4717-bbf4-432322e86fdb")
 	)
 	(label "USB_CONN_D+"
-		(at 204.47 81.28 0)
+		(at 204.47 83.82 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5787,16 +5765,6 @@
 			(justify left bottom)
 		)
 		(uuid "a09ea922-21e3-476e-9399-18a445945b8c")
-	)
-	(label "SWO"
-		(at 130.81 173.99 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a70b13c5-0633-4ea6-a8de-09777b01cf53")
 	)
 	(label "SWDIO"
 		(at 143.51 95.25 180)
@@ -5868,19 +5836,9 @@
 		)
 		(uuid "eaad32b7-d4b2-4b97-906d-48dd4e3dc1fb")
 	)
-	(label "SWO"
-		(at 67.31 97.79 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ecfeb219-7de1-4b44-91f6-fc733b57dc7e")
-	)
-	(global_label "DRV_R_PH"
+	(global_label "DRV_L_SLEEP_N"
 		(shape input)
-		(at 86.36 123.19 180)
+		(at 86.36 120.65 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5890,7 +5848,7 @@
 		)
 		(uuid "2a42e561-6244-4e8a-a206-5a3ba5d09fa0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 73.9405 123.19 0)
+			(at 73.9405 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5928,7 +5886,7 @@
 	)
 	(global_label "DRV_R_SLEEP_N"
 		(shape input)
-		(at 86.36 128.27 180)
+		(at 86.36 102.87 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5938,7 +5896,7 @@
 		)
 		(uuid "61ff08bd-a9e0-4f44-8a4c-517fa2d6143d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 68.4373 128.27 0)
+			(at 68.4373 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5952,7 +5910,7 @@
 	)
 	(global_label "ENC_R_B"
 		(shape input)
-		(at 121.92 80.01 0)
+		(at 121.92 100.33 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5962,7 +5920,7 @@
 		)
 		(uuid "6bc64919-eda7-4ed8-b74f-3431c6b2cb8a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 133.1299 80.01 0)
+			(at 133.1299 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5998,7 +5956,7 @@
 			)
 		)
 	)
-	(global_label "DRV_L_EN"
+	(global_label "DRV_R_PH"
 		(shape input)
 		(at 86.36 105.41 180)
 		(fields_autoplaced yes)
@@ -6022,7 +5980,7 @@
 			)
 		)
 	)
-	(global_label "DRV_L_SLEEP_N"
+	(global_label "DRV_L_EN"
 		(shape input)
 		(at 86.36 125.73 180)
 		(fields_autoplaced yes)
@@ -6048,7 +6006,7 @@
 	)
 	(global_label "DRV_L_PH"
 		(shape input)
-		(at 86.36 120.65 180)
+		(at 86.36 123.19 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6058,7 +6016,7 @@
 		)
 		(uuid "b3d88eae-93aa-49da-a179-fe2b7b4e6c19")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 74.1824 120.65 0)
+			(at 74.1824 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6072,7 +6030,7 @@
 	)
 	(global_label "ENC_L_A"
 		(shape input)
-		(at 121.92 62.23 0)
+		(at 121.92 77.47 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6082,7 +6040,7 @@
 		)
 		(uuid "b929455a-19ac-4573-a040-9f19cb664176")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 132.7066 62.23 0)
+			(at 132.7066 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6096,7 +6054,7 @@
 	)
 	(global_label "ENC_L_B"
 		(shape input)
-		(at 121.92 64.77 0)
+		(at 121.92 80.01 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6106,7 +6064,7 @@
 		)
 		(uuid "f40cbfbe-3b00-4f7a-8e38-83dc2270d12a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 132.888 64.77 0)
+			(at 132.888 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6120,17 +6078,17 @@
 	)
 	(global_label "ENC_R_A"
 		(shape input)
-		(at 121.92 77.47 0)
+		(at 86.36 97.79 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "f4be8291-5f4c-470c-b947-fb475d7648a2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 132.9485 77.47 0)
+			(at 75.3315 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6138,7 +6096,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
@@ -6433,107 +6391,6 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 246.38 81.28 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "08e3066e-390d-4232-aec8-d69559849212")
-		(property "Reference" "R8"
-			(at 244.602 79.248 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22"
-			(at 248.158 79.248 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 246.38 83.058 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 246.38 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 246.38 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB" "C25092"
-			(at 246.38 81.28 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Type" "Basic"
-			(at 246.38 81.28 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3128c05f-7692-4149-b67d-5b1329ec52d6")
-		)
-		(pin "2"
-			(uuid "306c81be-6d6f-445c-a669-0eea4202ea05")
-		)
-		(instances
-			(project "driver-board"
-				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
-					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
 		(at 152.4 86.36 0)
 		(unit 1)
 		(body_style 1)
@@ -6599,7 +6456,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C25867"
 			(at 152.4 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -6995,107 +6852,6 @@
 			(project "driver-board"
 				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
 					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 246.38 83.82 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "28c767bf-d6c6-4161-979c-36405b2f09ff")
-		(property "Reference" "R9"
-			(at 244.602 86.106 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22"
-			(at 248.412 86.106 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 246.38 85.598 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 246.38 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 246.38 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB" "C25092"
-			(at 246.38 83.82 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Type" "Basic"
-			(at 246.38 83.82 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "edf61be1-de25-4086-9837-4943aad267a2")
-		)
-		(pin "2"
-			(uuid "04414a14-c6c3-40f7-a415-c0fd41d8d8d3")
-		)
-		(instances
-			(project "driver-board"
-				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
-					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -7592,6 +7348,109 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 217.17 73.66 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5ff6e408-5403-4e06-93e9-e2c1801797df")
+		(property "Reference" "C9"
+			(at 217.17 66.04 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100n"
+			(at 217.17 68.58 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 213.36 72.6948 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 217.17 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 217.17 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C307331"
+			(at 217.17 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Type" "Basic"
+			(at 217.17 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "15c01467-5b55-4280-9354-cf70d4525402")
+		)
+		(pin "2"
+			(uuid "f7ceef14-8c88-4eec-b95a-2310182c14a5")
+		)
+		(instances
+			(project "driver-board"
+				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
+					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:USB_C_Receptacle_USB2.0_16P")
 		(at 260.35 129.54 0)
 		(mirror y)
@@ -7624,7 +7483,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_USB:USB_C_Receptacle_G-Switch_GT-USB-7025"
+		(property "Footprint" "Connector_USB:USB_C_Receptacle_G-Switch_GT-USB-7010ASV"
 			(at 256.54 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -7657,7 +7516,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C963213"
+		(property "JLCPCB" "C2988369"
 			(at 260.35 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -8853,7 +8712,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 165.1 53.34 0)
+		(at 165.1 57.15 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -8865,7 +8724,7 @@
 		(fields_autoplaced yes)
 		(uuid "86287175-5084-4625-93dc-64bb098de632")
 		(property "Reference" "#PWR056"
-			(at 165.1 59.69 0)
+			(at 165.1 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8876,7 +8735,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 165.1 58.42 0)
+			(at 165.1 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8887,7 +8746,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 165.1 53.34 0)
+			(at 165.1 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8898,7 +8757,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 165.1 53.34 0)
+			(at 165.1 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8909,7 +8768,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 165.1 53.34 0)
+			(at 165.1 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9759,109 +9618,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 217.17 73.66 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "abc60189-c731-462d-b9bd-e03d804d57d3")
-		(property "Reference" "C9"
-			(at 217.17 66.04 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10u"
-			(at 217.17 68.58 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 220.98 72.6948 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 217.17 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 217.17 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB" "C15850"
-			(at 217.17 73.66 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Type" "Basic"
-			(at 217.17 73.66 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "04a97e6c-a1da-4235-af42-0fae46449561")
-		)
-		(pin "2"
-			(uuid "139289d8-f62c-4fa2-a366-9afa7dca53da")
-		)
-		(instances
-			(project "driver-board"
-				(path "/3304d5f8-08d9-4046-829b-96d64a4f111d"
-					(reference "C9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 153.67 46.99 0)
+		(at 153.67 50.8 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -9873,7 +9630,7 @@
 		(fields_autoplaced yes)
 		(uuid "bd7f9834-57f5-4340-8c8e-ebf8c7bfdf66")
 		(property "Reference" "C22"
-			(at 149.86 45.7199 0)
+			(at 149.86 49.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9884,7 +9641,7 @@
 			)
 		)
 		(property "Value" "10n"
-			(at 149.86 48.2599 0)
+			(at 149.86 52.0699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9895,7 +9652,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 152.7048 50.8 0)
+			(at 152.7048 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9906,7 +9663,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 153.67 46.99 0)
+			(at 153.67 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9917,7 +9674,7 @@
 			)
 		)
 		(property "Description" "STM32F103 VDDA high-frequency bypass: 10 nF ceramic, X7R preferred, 10 V or higher, 0402 recommended; connect across VDDA/VSSA and place immediately adjacent to U1 pins 9/8 with the shortest possible loop, with this 10 nF capacitor closest to the pins"
-			(at 153.67 46.99 0)
+			(at 153.67 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9927,8 +9684,8 @@
 				)
 			)
 		)
-		(property "JLCPCB" ""
-			(at 153.67 46.99 0)
+		(property "JLCPCB" "C15195"
+			(at 153.67 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9939,7 +9696,7 @@
 			)
 		)
 		(property "JLCPCB Type" "Basic"
-			(at 153.67 46.99 0)
+			(at 153.67 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9966,7 +9723,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 165.1 40.64 0)
+		(at 182.88 44.45 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -9978,7 +9735,7 @@
 		(fields_autoplaced yes)
 		(uuid "beb64267-0264-45b4-9fd7-6da7ce6a5fe0")
 		(property "Reference" "#PWR055"
-			(at 165.1 44.45 0)
+			(at 182.88 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9989,7 +9746,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 165.1 35.56 0)
+			(at 182.88 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9999,7 +9756,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 165.1 40.64 0)
+			(at 182.88 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10010,7 +9767,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 165.1 40.64 0)
+			(at 182.88 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10021,7 +9778,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 165.1 40.64 0)
+			(at 182.88 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10598,7 +10355,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 165.1 46.99 0)
+		(at 165.1 50.8 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -10610,7 +10367,7 @@
 		(fields_autoplaced yes)
 		(uuid "f7375333-332f-469a-8f19-93c77158a355")
 		(property "Reference" "C23"
-			(at 161.29 45.7199 0)
+			(at 161.29 49.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10621,7 +10378,7 @@
 			)
 		)
 		(property "Value" "1u"
-			(at 161.29 48.2599 0)
+			(at 161.29 52.0699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10632,7 +10389,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 164.1348 50.8 0)
+			(at 164.1348 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10643,7 +10400,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 165.1 46.99 0)
+			(at 165.1 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10654,7 +10411,7 @@
 			)
 		)
 		(property "Description" "STM32F103 VDDA local decoupling: 1 uF ceramic, X5R or X7R, 10 V or higher, 0603 recommended; 0402 is acceptable only when its DC-bias effective capacitance is adequate; connect across VDDA/VSSA and place immediately adjacent to U1 pins 9/8 with a short ground return"
-			(at 165.1 46.99 0)
+			(at 165.1 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10664,8 +10421,8 @@
 				)
 			)
 		)
-		(property "JLCPCB" ""
-			(at 165.1 46.99 0)
+		(property "JLCPCB" "C15849"
+			(at 165.1 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10676,7 +10433,7 @@
 			)
 		)
 		(property "JLCPCB Type" "Basic"
-			(at 165.1 46.99 0)
+			(at 165.1 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
