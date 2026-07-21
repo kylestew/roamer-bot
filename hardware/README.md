@@ -1,6 +1,6 @@
 # Roamer Hardware
 
-Status: **Rev A is routed and feature-frozen; fabrication and bring-up verification remain.**
+Status: **Rev A was ordered from JLCPCB on 2026-07-18 and is in production; fabrication and bring-up verification remain.**
 
 This is the single source of truth for the custom Romi motor-controller hardware. If this document disagrees with the KiCad design, the schematic, PCB, and generated BOM are authoritative and this document must be corrected.
 
@@ -28,6 +28,7 @@ Success means teleoperation, reliable encoder logging, useful telemetry, and an 
 - [PCB](driver-board/driver-board.kicad_pcb)
 - [KiCad project](driver-board/driver-board.kicad_pro)
 - [Generated BOM snapshot](driver-board/driver-board.csv)
+- [Rev A JLCPCB manufacturing release](releases/rev-a-jlcpcb-2026-07-18.md)
 - [Custom footprints](driver-board/CustomParts.pretty/)
 
 The checked-in CSV is a working snapshot, not purchase-ready assembly data. Regenerate and review the BOM and placement file from the final schematic and PCB immediately before ordering.
@@ -157,8 +158,11 @@ Mechanical fit has been checked repeatedly against the Romi chassis, encoder boa
 
 ## Current Verification State
 
-As of 2026-07-17:
+As of 2026-07-21:
 
+- JLCPCB order `W2026071807372374` is in production and its PCB production file is confirmed;
+- the order contains five PCBs, including two economically assembled PCBAs;
+- fabrication completion and physical bring-up remain;
 - schematic ERC: **0 violations**;
 - PCB DRC: **0 violations**;
 - PCB connectivity: **0 unconnected items**;
