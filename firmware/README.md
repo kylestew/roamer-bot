@@ -44,7 +44,45 @@ STM32_Programmer_CLI -c port=SWD -w firmware/build-release/roamer_rev_a.hex -v -
 The initial image keeps both DRV8838 drivers asleep and both PWM inputs low.
 PC13 blinks with a one-second cycle after the 16 MHz HSE starts and the system
 switches to 48 MHz. A rapid blink indicates that firmware remained on the
-8 MHz internal oscillator because HSE startup failed.
+8 MHz internal oscillator because HSE startup failed. USB is enabled only when
+the 48 MHz clock is available.
+
+## USB heartbeat bring-up
+
+Rev A is self-powered and uses USB only for data. Power the board from its
+battery or a current-limited bench supply, connect it to an already-powered
+host, and then look for the CDC ACM serial device. USB alone does not power the
+board.
+
+On macOS, find and open the device with:
+
+```sh
+ls /dev/cu.usbmodem*
+screen /dev/cu.usbmodem* 115200
+```
+
+The baud-rate setting is accepted for CDC compatibility but does not control a
+physical UART. While the serial port is open, the firmware sends one line per
+second:
+
+```text
+roamer heartbeat
+```
+
+Close `screen` with `Ctrl-A`, then `\`. The PC13 LED continues blinking while
+USB is connected. Motor commands and received serial data are not supported by
+this bring-up image; received bytes are discarded and both drivers remain
+asleep.
+
+The USB identity is development-only: VID `0xCAFE`, PID `0x4001`, manufacturer
+`Roamer`, and product `Roamer Rev A`. The serial string comes from the MCU's
+96-bit unique ID. Replace the prototype VID/PID with assigned values before any
+product distribution.
+
+Rev A has a permanently enabled D+ pullup and no VBUS sensing. Firmware pulses
+D+ low during startup to encourage clean re-enumeration after reset, but if the
+host does not rediscover the device, unplug and reconnect the USB cable as
+documented in the hardware policy.
 
 ## Verified Rev A pin contract
 

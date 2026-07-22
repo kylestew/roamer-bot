@@ -26,6 +26,7 @@ add_executable(roamer_rev_a
     src/startup_stm32f103xb.s
     src/system.c
     src/board.c
+    src/usb_cdc.c
     src/main.c
 )
 set_target_properties(roamer_rev_a PROPERTIES SUFFIX ".elf")
